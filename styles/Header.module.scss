@@ -59,10 +59,17 @@
       position: absolute;
       bottom: -3px;
       left: 50%;
-      width: 30px;
+      width: 0;
       transform: translateX(-50%);
       height: 1px;
       background-color: $color-accent;
+      animation: underline 0.2s ease-in-out forwards;
     }
+  }
+}
+
+@keyframes underline {
+  100% {
+    width: 30px;
   }
 }

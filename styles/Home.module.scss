@@ -12,7 +12,6 @@
 
 .heading {
   font-size: 2rem;
-  margin-bottom: 2rem;
   color: $color-dark;
   font-weight: 300;
 }
@@ -20,13 +19,5 @@
 .subheading {
   font-size: 1.5rem;
   color: $color-med;
-}
-
-.contact__form {
-  width: 680px;
-  max-width: 100%;
-  padding: 2rem;
-  border: 1px solid $color-med;
-  border-radius: 12px;
-  height: 100%;
+  font-weight: 300;
 }

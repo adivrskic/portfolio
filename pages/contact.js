@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Contact Me</title>
+        <title>Adi Vrskic - Contact</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -14,9 +14,19 @@ export default function Contact() {
         />
       </Head>
 
-      <main>
-        <section>
-          <h2>Contact</h2>
+      <main className={styles.main}>
+        <section className={styles.section}>
+          <h2 className={styles.heading}>Contact me if you're not a robot</h2>
+          <div className={styles.contact__form}>
+            <form>
+              <input type="text" required />
+              <input type="text" />
+              <input type="email" required />
+              <input type="tel" />
+              <input type="text" />
+              <button type="submit">Get in Touch</button>
+            </form>
+          </div>
         </section>
       </main>
     </div>

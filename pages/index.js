@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
@@ -18,13 +18,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <section>
-          <Image
-            src="/static/images/sceneVisualizer.jpg"
-            width="400"
-            height="400"
-            alt="an image"
-          />
+        <section className={styles.section}>
+          <div className={styles.section__container}>
+            <h2 className={styles.heading}>Hey, I'm Adi</h2>
+            <p className={styles.subheading}>
+              I'm a frontend developer - I love creating applications with
+              React, and I specialize in building eCommerce websites.
+            </p>
+          </div>
         </section>
       </main>
     </div>

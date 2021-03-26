@@ -7,10 +7,9 @@ body {
 }
 
 main {
+  max-width: calc(#{$body_max_width} + 4rem);
   min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem;
+  margin: auto;
+  margin-top: 72px; // Header height
 }
