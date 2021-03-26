@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../styles/Header.module.scss";
 
 export const Header = () => {
@@ -8,15 +9,19 @@ export const Header = () => {
         <h1 className={styles.nav__heading}>Adi Vrskic</h1>
         <ul className={styles.nav__links}>
           <li className={styles.nav__link}>
-            <a className={styles.active} href="#">
-              Home
-            </a>
+            <Link href="/">
+              <a className={styles.active}>Home</a>
+            </Link>
           </li>
           <li className={styles.nav__link}>
-            <a href="#">Projects</a>
+            <Link href="/projects">
+              <a>Projects</a>
+            </Link>
           </li>
           <li className={styles.nav__link}>
-            <a href="#">Contact</a>
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
           </li>
         </ul>
       </nav>

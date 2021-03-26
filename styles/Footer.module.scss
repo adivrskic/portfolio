@@ -3,7 +3,9 @@
 .footer {
   padding: 0.5rem;
   width: $body-max-width;
+  max-width: 100%;
   color: $color-dark;
+  margin: auto;
 
   &__container {
     display: flex;

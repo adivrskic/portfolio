@@ -1,14 +1,12 @@
 import Head from "next/head";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Projects.module.scss";
 
-export default function Home() {
+export default function Projects() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Adi Vrskic</title>
+        <title>My Projects</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -17,14 +15,9 @@ export default function Home() {
         />
       </Head>
 
-      <main className={styles.main}>
+      <main>
         <section>
-          <Image
-            src="/static/images/sceneVisualizer.jpg"
-            width="400"
-            height="400"
-            alt="an image"
-          />
+          <h2>Projects</h2>
         </section>
       </main>
     </div>
