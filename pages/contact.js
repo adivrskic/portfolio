@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Resume } from "../components/Resume";
 import styles from "../styles/Contact.module.scss";
 
 export default function Contact() {
@@ -27,6 +28,9 @@ export default function Contact() {
               <button type="submit">Get in Touch</button>
             </form>
           </div>
+        </section>
+        <section className={styles.section}>
+          <Resume />
         </section>
       </main>
     </div>

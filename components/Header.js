@@ -9,7 +9,10 @@ export const Header = () => {
   return (
     <header className={`${styles.header} ${styles.shadow}`}>
       <nav className={styles.nav}>
-        <h1 className={styles.nav__heading}>Adi Vrskic</h1>
+        <Link href="/">
+          <h1 className={styles.nav__heading}>Adi Vrskic</h1>
+        </Link>
+
         <ul className={styles.nav__links}>
           <li className={styles.nav__link}>
             <Link href="/">

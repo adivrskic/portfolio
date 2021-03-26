@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { Resume } from "../components/Resume";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
@@ -26,6 +25,9 @@ export default function Home() {
               React, and I specialize in building eCommerce websites.
             </p>
           </div>
+        </section>
+        <section className={styles.section}>
+          <Resume />
         </section>
       </main>
     </div>

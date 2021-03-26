@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Resume } from "../components/Resume";
 import Carousel from "react-multi-carousel";
 import styles from "../styles/Projects.module.scss";
 import "react-multi-carousel/lib/styles.css";
@@ -72,6 +73,9 @@ export default function Projects() {
               <p>A description</p>
             </div>
           </Carousel>
+        </section>
+        <section className={styles.section}>
+          <Resume />
         </section>
       </main>
     </div>

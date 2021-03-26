@@ -10,12 +10,20 @@ export const Footer = () => {
         <div>
           <ul className={styles.footer__links}>
             <li className={styles.footer__link}>
-              <a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/adi-vrskic-48758213b/"
+                rel="noopener noreferrer"
+              >
                 <IoLogoLinkedin className={styles.linkedin} />
               </a>
             </li>
             <li className={styles.footer__link}>
-              <a>
+              <a
+                target="_blank"
+                href="https://github.com/adivrskic"
+                rel="noopener noreferrer"
+              >
                 <IoLogoGithub className={styles.github} />
               </a>
             </li>

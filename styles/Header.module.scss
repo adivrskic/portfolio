@@ -26,6 +26,7 @@
   &__heading {
     font-size: 1.675rem;
     color: $color-dark;
+    cursor: pointer; // Special case
   }
 
   &__links {
