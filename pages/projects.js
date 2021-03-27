@@ -6,7 +6,7 @@ import styles from "../styles/Projects.module.scss";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Projects() {
-  const responsive = {
+  const carouselResponsiveProp = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
@@ -39,7 +39,7 @@ export default function Projects() {
         <section className={styles.section}>
           <h2 className={styles.heading}>Some projects I've worked on</h2>
           <Carousel
-            responsive={responsive}
+            responsive={carouselResponsiveProp}
             showDots={false}
             arrows={false}
             autoPlay={false}

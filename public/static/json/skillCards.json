@@ -1,0 +1,72 @@
+[
+  {
+    "cardColor": "#e34c26",
+    "cardIcon": "IoLogoHtml5",
+    "cardHeading": "HTML5",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 95
+  },
+  {
+    "cardColor": "#264de4",
+    "cardIcon": "IoLogoCss3",
+    "cardHeading": "CSS3",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 90
+  },
+  {
+    "cardColor": "#cc6699",
+    "cardIcon": "IoLogoSass",
+    "cardHeading": "Sass",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 80
+  },
+  {
+    "cardColor": "#f0db4f",
+    "cardIcon": "IoLogoJavascript",
+    "cardHeading": "JavaScript",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 90
+  },
+  {
+    "cardColor": "#61dbfb",
+    "cardIcon": "IoLogoReact",
+    "cardHeading": "React",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 80
+  },
+  {
+    "cardColor": "#41b883",
+    "cardIcon": "IoLogoVue",
+    "cardHeading": "Vue",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 70
+  },
+  {
+    "cardColor": "#9feaf9",
+    "cardIcon": "IoLogoElectron",
+    "cardHeading": "Electron",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 75
+  },
+  {
+    "cardColor": "#30699b",
+    "cardIcon": "IoLogoPython",
+    "cardHeading": "Python",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 70
+  },
+  {
+    "cardColor": "#68a063",
+    "cardIcon": "IoLogoNodejs",
+    "cardHeading": "Node.js",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 70
+  },
+  {
+    "cardColor": "#ffcb2b",
+    "cardIcon": "IoLogoFirebase",
+    "cardHeading": "Firebase",
+    "cardSubheading": "Some sample text",
+    "cardProgress": 70
+  }
+]

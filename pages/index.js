@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Resume } from "../components/Resume";
+import { SkillCards } from "../components/SkillCards";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
@@ -25,6 +26,9 @@ export default function Home() {
               React, and I specialize in building eCommerce websites.
             </p>
           </div>
+        </section>
+        <section className={styles.section}>
+          <SkillCards />
         </section>
         <section className={styles.section}>
           <Resume />
