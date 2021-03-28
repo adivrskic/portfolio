@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.section {
+  &__container {
+    max-width: 100%;
+    width: 680px;
+  }
+}
+
+.contact__form {
+  width: 680px;
+  max-width: 100%;
+  padding: 2rem;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  height: 100%;
+}

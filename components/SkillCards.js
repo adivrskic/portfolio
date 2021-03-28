@@ -1,6 +1,6 @@
 import React from "react";
 import { SkillCard } from "./SkillCard";
-import styles from "../styles/SkillCards.module.scss";
+import styles from "../styles/components/SkillCards.module.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import skillCardData from "../public/static/json/skillCards.json";
@@ -26,6 +26,14 @@ export const SkillCards = () => {
 
   return (
     <div className={styles.skillcards}>
+      <div className={styles.headingContainer}>
+        <h2 className={styles.heading}>In a nutshell...</h2>
+        <p className={styles.subheading}>
+          My goal is to use these technologies - and more - to create modern,
+          responsive, and accessible applications.
+        </p>
+      </div>
+
       <Carousel
         responsive={carouselResponsiveProp}
         showDots={false}
@@ -35,14 +43,17 @@ export const SkillCards = () => {
         keyBoardControl={true}
         partialVisible
       >
-        {skillCardData.map((item) => (
-          <SkillCard
-            color={item.cardColor}
-            icon={item.cardIcon}
-            heading={item.cardHeading}
-            subheading={item.cardSubheading}
-            progress={item.cardProgress}
-          />
+        {skillCardData.map((item, i) => (
+          <>
+            <SkillCard
+              idx={i}
+              color={item.cardColor}
+              icon={item.cardIcon}
+              heading={item.cardHeading}
+              subheading={item.cardSubheading}
+              progress={item.cardProgress}
+            />
+          </>
         ))}
       </Carousel>
     </div>

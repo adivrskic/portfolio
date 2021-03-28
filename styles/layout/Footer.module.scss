@@ -1,9 +1,9 @@
-@import "variables.scss";
+@import "../variables.scss";
 .footer {
   padding: 0.5rem;
   width: $body-max-width;
   max-width: 100%;
-  color: $color-dark;
+  color: $color-dark-max;
   margin: auto;
 
   &__container {

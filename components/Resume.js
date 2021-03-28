@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Resume.module.scss";
+import styles from "../styles/components/Resume.module.scss";
 
 export const Resume = () => {
   return (

@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { Resume } from "../components/Resume";
-import styles from "../styles/Contact.module.scss";
+import styles from "../styles/pages/Contact.module.scss";
 
 export default function Contact() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Adi Vrskic - Contact</title>
         <link rel="icon" href="/favicon.ico" />
@@ -33,6 +33,6 @@ export default function Contact() {
           <Resume />
         </section>
       </main>
-    </div>
+    </>
   );
 }

@@ -13,3 +13,25 @@ main {
   margin: auto;
   margin-top: 72px; // Header height
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 7px - 4rem);
+  width: 100%;
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 2rem;
+    color: $color-dark-max;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: $color-dark-min;
+    font-weight: 300;
+  }
+}

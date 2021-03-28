@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/SkillCard.module.scss";
+import styles from "../styles/components/SkillCard.module.scss";
 import {
   IoLogoHtml5,
   IoLogoCss3,
@@ -13,7 +13,14 @@ import {
   IoLogoFirebase,
 } from "react-icons/io5";
 
-export const SkillCard = ({ color, icon, heading, subheading, progress }) => {
+export const SkillCard = ({
+  idx,
+  color,
+  icon,
+  heading,
+  subheading,
+  progress,
+}) => {
   return (
     <div className={styles.skillcard}>
       <div
@@ -37,11 +44,11 @@ export const SkillCard = ({ color, icon, heading, subheading, progress }) => {
       <div className={styles.skillcard__content}>
         <h3 className={styles.skillcard__heading}>{heading}</h3>
         <p className={styles.skillcard__subheading}>{subheading}</p>
+        <div
+          className={styles.skillcard__progress}
+          style={{ maxWidth: `${progress}%`, animationDelay: `${0.25 * idx}s` }}
+        ></div>
       </div>
-      <div
-        className={styles.skillcard__progress}
-        data-progress={progress}
-      ></div>
     </div>
   );
 };

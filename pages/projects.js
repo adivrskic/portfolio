@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Resume } from "../components/Resume";
 import Carousel from "react-multi-carousel";
-import styles from "../styles/Projects.module.scss";
+import styles from "../styles/pages/Projects.module.scss";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Projects() {
@@ -24,7 +24,7 @@ export default function Projects() {
     },
   };
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Adi Vrskic - Projects</title>
         <link rel="icon" href="/favicon.ico" />
@@ -51,7 +51,7 @@ export default function Projects() {
           >
             <div
               className={styles.project__item}
-              style={{ backgroundColor: "slateblue" }}
+              style={{ backgroundColor: "skyblue" }}
             >
               <h3>A title</h3>
               <p>A description</p>
@@ -78,6 +78,6 @@ export default function Projects() {
           <Resume />
         </section>
       </main>
-    </div>
+    </>
   );
 }

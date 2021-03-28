@@ -1,10 +1,20 @@
 $body-max-width: 1200px;
 
-$color-dark: #4f5d75;
-$color-med: #8d99ae;
-$color-light: #edf2f4;
+$section-margin: 4rem;
+$section-margin-lg: 6rem;
+
+$color-dark-max: #0d1b2a;
+$color-dark-min: #4a4e69;
+$color-med: #415a77;
+$color-light-min: #778da9;
+$color-light-max: #e0e1dd;
 $color-accent: #ef233c;
 $color-accent-dark: #d90429;
+$color-border: #edf2f4;
+
+$border-radius: 12px;
+$border-radius-circle: 50%;
+$border-radius-max: 9999px;
 
 $box-shadow-nav: 0 1px 2px rgba(79, 93, 117, 0.2); // rgb of $color-dark
 
@@ -12,3 +22,24 @@ $z-top: 99;
 
 $linkedin-hover-color: #04669a;
 $github-hover-color: #040204;
+
+@mixin flex($dir: row, $justify: null, $align: null) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin position(
+  $pos: absolute,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $pos;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

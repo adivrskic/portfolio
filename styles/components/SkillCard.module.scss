@@ -1,7 +1,9 @@
-@import "variables.scss";
+@import "../variables.scss";
 
 .skillcard {
   margin-right: 2rem;
+  cursor: pointer;
+
   &__color {
     position: relative;
     width: 100%;
@@ -11,16 +13,16 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    border: 1px solid $color-light;
+    border: 1px solid $color-border;
     border-top: none;
-    padding: 2rem;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    padding: 4rem 2rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
   }
 
   &__logo {
@@ -35,23 +37,41 @@
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
-    border: 1px solid $color-light;
+    border: 1px solid $color-border;
 
     svg {
       width: 2.25rem;
       height: 2.25rem;
-      color: $color-dark;
+      color: $color-dark-max;
     }
   }
 
   &__heading {
     margin-top: 2rem;
     font-weight: 300;
-    color: $color-dark;
+    color: $color-dark-max;
   }
 
   &__subheading {
     font-weight: 300;
-    color: $color-med;
+    color: $color-dark-min;
+  }
+
+  &__progress {
+    position: absolute;
+    left: 0.667rem;
+    bottom: 0.667rem;
+    height: 5px;
+    width: 90%;
+    background: $color-light-min;
+    border-radius: 9999px;
+    width: 0;
+    animation: animateProgress 1s cubic-bezier(0.2, 0, 0.4, 1) forwards;
+  }
+}
+
+@keyframes animateProgress {
+  100% {
+    width: calc(100% - 2rem);
   }
 }

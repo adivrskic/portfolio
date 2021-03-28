@@ -1,31 +1,23 @@
-@import "variables.scss";
+@import "../variables.scss";
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  @include flex(row, space-between, center);
+  @include position(fixed, 0, null, null, 0);
   width: 100%;
   text-transform: uppercase;
-  background-color: $color-light;
+  background-color: $color-dark-max;
   padding: 1rem 2rem;
   z-index: $z-top;
 }
 
 .header.shadow {
-  // border-bottom: 1px solid $color-light;
   box-shadow: $box-shadow-nav;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: $body-max-width;
-  margin: auto;
-
   &__heading {
     font-size: 1.675rem;
-    color: $color-dark;
+    color: $color-light-max;
     cursor: pointer; // Special case
   }
 
@@ -34,36 +26,34 @@
   }
 
   &__link {
-    display: flex;
-    justify-content: flex-end;
+    @include flex(row, flex-end);
     margin-left: 20px;
 
     a {
       text-decoration: none;
-      color: $color-dark;
+      color: $color-light-max;
       font-size: 0.875rem;
+      transition: all 0.2s ease-out;
 
       @media (hover: hover) {
         &:hover {
-          color: $color-accent;
+          color: $color-light-min;
         }
       }
     }
 
     a.active {
       position: relative;
-      color: $color-accent;
+      color: $color-light-min;
     }
 
     a.active::after {
       content: "";
-      position: absolute;
-      bottom: -3px;
-      left: 50%;
+      @include position(absolute, null, null, -3px, 50%);
       width: 0;
       transform: translateX(-50%);
       height: 1px;
-      background-color: $color-accent;
+      background-color: $color-light-min;
       animation: underline 0.2s ease-in-out forwards;
     }
   }
@@ -71,6 +61,6 @@
 
 @keyframes underline {
   100% {
-    width: 30px;
+    width: 25px;
   }
 }

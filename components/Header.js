@@ -1,18 +1,18 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "../styles/Header.module.scss";
+import styles from "../styles/layout/Header.module.scss";
 
 export const Header = () => {
   const router = useRouter();
 
   return (
     <header className={`${styles.header} ${styles.shadow}`}>
-      <nav className={styles.nav}>
-        <Link href="/">
-          <h1 className={styles.nav__heading}>Adi Vrskic</h1>
-        </Link>
+      <Link href="/">
+        <h1 className={styles.nav__heading}>Adi Vrskic</h1>
+      </Link>
 
+      <nav className={styles.nav}>
         <ul className={styles.nav__links}>
           <li className={styles.nav__link}>
             <Link href="/">

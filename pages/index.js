@@ -2,11 +2,11 @@ import Head from "next/head";
 import { Resume } from "../components/Resume";
 import { SkillCards } from "../components/SkillCards";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/pages/Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Adi Vrskic</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,7 +19,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <section className={styles.section}>
-          <div className={styles.section__container}>
+          <div className={styles.headingContainer}>
             <h2 className={styles.heading}>Hey, I'm Adi</h2>
             <p className={styles.subheading}>
               I'm a frontend developer - I love creating applications with
@@ -34,6 +34,6 @@ export default function Home() {
           <Resume />
         </section>
       </main>
-    </div>
+    </>
   );
 }
