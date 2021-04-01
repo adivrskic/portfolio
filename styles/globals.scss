@@ -9,7 +9,7 @@ body {
 main {
   max-width: calc(#{$body_max_width} + 4rem);
   min-height: 100vh;
-  padding: 2rem;
+  padding: 0 2rem;
   margin: auto;
   margin-top: 72px; // Header height
 }
@@ -24,16 +24,26 @@ section {
   margin-bottom: 4rem;
 
   h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     color: $color-dark-max;
     font-weight: 300;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    max-width: $body-container-width;
+    line-height: 1.25;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $color-dark-min;
     font-weight: 300;
+    text-align: center;
   }
+}
+
+.flex-container {
+  @include flex(row, space-around, center);
+  width: $body-container-width;
 }
 
 *::-webkit-scrollbar {

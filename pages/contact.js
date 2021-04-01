@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Resume } from "../components/Resume";
+import { Bubble } from "../components/Bubble";
 import styles from "../styles/pages/Contact.module.scss";
 
 export default function Contact() {
@@ -18,15 +19,22 @@ export default function Contact() {
       <main className={styles.main}>
         <section className={styles.section}>
           <h2 className={styles.heading}>Contact me if you're not a robot</h2>
-          <div className={styles.contact__form}>
-            <form>
-              <input type="text" required />
-              <input type="text" />
-              <input type="email" required />
-              <input type="tel" />
-              <input type="text" />
-              <button type="submit">Get in Touch</button>
-            </form>
+          <div class="flex-container">
+            <Bubble
+              icon="IoPhonePortraitOutline"
+              backgroundColor="#778da9"
+              color="#fff"
+            />
+            <Bubble
+              icon="IoMailOutline"
+              backgroundColor="#778da9"
+              color="#fff"
+            />
+            <Bubble
+              icon="IoLogoLinkedin"
+              backgroundColor="#778da9"
+              color="#fff"
+            />
           </div>
         </section>
         <section className={styles.section}>

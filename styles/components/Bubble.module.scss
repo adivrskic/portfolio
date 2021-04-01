@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.bubble {
+  @include flex(null, center, center);
+  width: 10rem;
+  height: 10rem;
+  border-radius: $border-radius-circle;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.08) translateY(-0.5rem);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.333);
+    }
+  }
+
+  svg {
+    height: 50%;
+    width: 50%;
+  }
+}

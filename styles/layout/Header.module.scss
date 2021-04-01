@@ -19,6 +19,13 @@
     font-size: 1.675rem;
     color: $color-light-max;
     cursor: pointer; // Special case
+    transition: color 0.25s ease-in;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
   }
 
   &__links {
