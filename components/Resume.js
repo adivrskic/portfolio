@@ -1,26 +1,28 @@
 import React from "react";
+import { Bubble } from "../components/Bubble";
 import styles from "../styles/components/Resume.module.scss";
 
 export const Resume = () => {
   return (
     <div className={styles.resume}>
       <h2 className={styles.heading}>Check out these important documents</h2>
-      <p className={styles.subheading}>You won't regret it</p>
       <div className={styles.resume__links}>
-        <a
-          className={styles.resume__link}
-          href="/static/documents/resume.pdf"
+        <Bubble
+          icon="IoReaderOutline"
+          backgroundColor="#778da9"
+          color="#fff"
+          caption="Resume PDF"
+          link={"/static/documents/resume.pdf"}
           download
-        >
-          Resume PDF
-        </a>
-        <a
-          className={styles.resume__link}
-          href="/static/documents/resume.docx"
+        />
+        <Bubble
+          icon="IoDocumentText"
+          backgroundColor="#778da9"
+          color="#fff"
+          caption="Resume Docx"
+          link={"/static/documents/resume.docx"}
           download
-        >
-          Resume Doc
-        </a>
+        />
       </div>
     </div>
   );

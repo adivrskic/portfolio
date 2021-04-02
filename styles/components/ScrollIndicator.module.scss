@@ -1,8 +1,7 @@
 @import "../variables.scss";
 
 .progress {
-  position: fixed;
-  top: $header-height;
+  @include position(fixed, $header-height, null, null, 0);
   background: $color-light-max;
   height: 3px;
   width: 100%;

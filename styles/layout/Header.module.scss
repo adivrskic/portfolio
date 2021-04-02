@@ -1,13 +1,20 @@
 @import "../variables.scss";
 
 .header {
-  @include flex(row, space-between, center);
   @include position(fixed, 0, null, null, 0);
   width: 100%;
   text-transform: uppercase;
   background-color: $color-dark-max;
   padding: 1rem 2rem;
   z-index: $z-top;
+}
+
+.headerContainer {
+  @include flex(row, space-between, center);
+  margin: auto;
+  width: 100%;
+  max-width: $body-max-width;
+  position: relative;
 }
 
 .header.shadow {
@@ -17,19 +24,16 @@
 .nav {
   &__heading {
     font-size: 1.675rem;
-    color: $color-light-max;
+    color: #fff;
     cursor: pointer; // Special case
-    transition: color 0.25s ease-in;
-
-    @media (hover: hover) {
-      &:hover {
-        color: #fff;
-      }
-    }
   }
 
   &__links {
-    display: flex;
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+    }
   }
 
   &__link {
@@ -38,7 +42,7 @@
 
     a {
       text-decoration: none;
-      color: $color-light-max;
+      color: #fff;
       font-size: 0.875rem;
       transition: all 0.2s ease-out;
 
@@ -63,6 +67,23 @@
       background-color: $color-light-min;
       animation: underline 0.2s ease-in-out forwards;
     }
+  }
+}
+
+.mobile {
+  @include position(absolute, 0, 0);
+  width: 2rem;
+  height: 100%;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+    color: $color-light-max;
   }
 }
 

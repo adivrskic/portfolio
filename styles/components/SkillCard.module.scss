@@ -40,14 +40,14 @@
     border: 1px solid $color-border;
 
     svg {
-      width: 2.25rem;
-      height: 2.25rem;
-      color: $color-dark-max;
+      width: 55%;
+      height: 55%;
+      color: $color-dark-min;
     }
   }
 
   &__heading {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-weight: 300;
     color: $color-dark-max;
   }
@@ -55,6 +55,7 @@
   &__subheading {
     font-weight: 300;
     color: $color-dark-min;
+    font-size: 1rem;
   }
 
   &__progress {

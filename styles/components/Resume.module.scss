@@ -4,6 +4,7 @@
   margin: 2rem 0;
 
   &__links {
+    @include flex(row, space-around, center, wrap);
     margin: 2rem 0;
   }
 
@@ -14,15 +15,6 @@
     border-radius: 12px;
     padding: 0.75rem 2rem;
     transition: all 0.2s ease-in-out;
-
-    // @media (hover: hover) {
-    //   &:first-child:hover {
-    //     border: 1px solid $color-accent-dark;
-    //   }
-    //   &:last-child:hover {
-    //     border: 1px solid $color-dark;
-    //   }
-    // }
   }
 
   &__link:first-child {

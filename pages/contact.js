@@ -19,21 +19,27 @@ export default function Contact() {
       <main className={styles.main}>
         <section className={styles.section}>
           <h2 className={styles.heading}>Contact me if you're not a robot</h2>
-          <div class="flex-container">
+          <div className="flex-container">
             <Bubble
               icon="IoPhonePortraitOutline"
               backgroundColor="#778da9"
               color="#fff"
+              caption="Call/Text"
+              link="tel:+16782306936"
             />
             <Bubble
               icon="IoMailOutline"
               backgroundColor="#778da9"
               color="#fff"
+              caption="Email"
+              link="mailto:adivrskic123@gmail.com"
             />
             <Bubble
               icon="IoLogoLinkedin"
               backgroundColor="#778da9"
               color="#fff"
+              caption="LinkedIn"
+              link="https://www.linkedin.com/in/adi-vrskic-48758213b"
             />
           </div>
         </section>

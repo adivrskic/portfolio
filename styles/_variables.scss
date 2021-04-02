@@ -1,10 +1,14 @@
 $body-max-width: 1200px;
-$body-container-width: 680px;
+$body-container-width: 800px;
 
 $section-margin: 4rem;
 $section-margin-lg: 6rem;
 
 $header-height: 72px;
+
+$breakpoint-sm: 400px;
+$breakpoint-md: 680px;
+$breakpoint-lg: 960px;
 
 $color-dark-max: #0d1b2a;
 $color-dark-min: #4a4e69;
@@ -26,11 +30,12 @@ $z-top: 99;
 $linkedin-hover-color: #04669a;
 $github-hover-color: #040204;
 
-@mixin flex($dir: row, $justify: null, $align: null) {
+@mixin flex($dir: row, $justify: null, $align: null, $wrap: null) {
   display: flex;
   flex-direction: $dir;
   justify-content: $justify;
   align-items: $align;
+  flex-wrap: $wrap;
 }
 
 @mixin position(

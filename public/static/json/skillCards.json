@@ -1,19 +1,22 @@
 [
   {
+    "key": 1,
     "cardColor": "#e34c26",
     "cardIcon": "IoLogoHtml5",
     "cardHeading": "HTML5",
-    "cardSubheading": "Some sample text",
+    "cardSubheading": "These days I put my focus on using semantic HTML for optimal SEO scores.",
     "cardProgress": 95
   },
   {
+    "key": 2,
     "cardColor": "#264de4",
     "cardIcon": "IoLogoCss3",
     "cardHeading": "CSS3",
-    "cardSubheading": "Some sample text",
+    "cardSubheading": "Forever on the hunt for the perfect easing function.",
     "cardProgress": 90
   },
   {
+    "key": 3,
     "cardColor": "#cc6699",
     "cardIcon": "IoLogoSass",
     "cardHeading": "Sass",
@@ -21,13 +24,15 @@
     "cardProgress": 80
   },
   {
+    "key": 4,
     "cardColor": "#f0db4f",
     "cardIcon": "IoLogoJavascript",
     "cardHeading": "JavaScript",
-    "cardSubheading": "Some sample text",
+    "cardSubheading": "8+ years of JavaScript development - from Vanilla to jQuery and now React",
     "cardProgress": 90
   },
   {
+    "key": 5,
     "cardColor": "#61dbfb",
     "cardIcon": "IoLogoReact",
     "cardHeading": "React",
@@ -35,6 +40,7 @@
     "cardProgress": 80
   },
   {
+    "key": 6,
     "cardColor": "#41b883",
     "cardIcon": "IoLogoVue",
     "cardHeading": "Vue",
@@ -42,6 +48,7 @@
     "cardProgress": 70
   },
   {
+    "key": 7,
     "cardColor": "#9feaf9",
     "cardIcon": "IoLogoElectron",
     "cardHeading": "Electron",
@@ -49,6 +56,7 @@
     "cardProgress": 75
   },
   {
+    "key": 8,
     "cardColor": "#30699b",
     "cardIcon": "IoLogoPython",
     "cardHeading": "Python",
@@ -56,6 +64,7 @@
     "cardProgress": 70
   },
   {
+    "key": 9,
     "cardColor": "#68a063",
     "cardIcon": "IoLogoNodejs",
     "cardHeading": "Node.js",
@@ -63,6 +72,7 @@
     "cardProgress": 70
   },
   {
+    "key": 10,
     "cardColor": "#ffcb2b",
     "cardIcon": "IoLogoFirebase",
     "cardHeading": "Firebase",

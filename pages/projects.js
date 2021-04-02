@@ -37,7 +37,9 @@ export default function Projects() {
 
       <main className={styles.main}>
         <section className={styles.section}>
-          <h2 className={styles.heading}>Some projects I've worked on</h2>
+          <h2 className={styles.heading}>My projects</h2>
+          <div className={`${styles.side} ${styles.side__left}`}></div>
+          <div className={`${styles.side} ${styles.side__right}`}></div>
           <Carousel
             responsive={carouselResponsiveProp}
             showDots={false}
