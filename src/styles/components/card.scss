@@ -1,0 +1,54 @@
+@import "../colors";
+@import "../margins";
+
+.card {
+  flex-basis: calc(50% - 0.5rem);
+  background-color: $color-dark;
+  height: 300px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    margin-bottom: $margin-sm;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-basis: 100%;
+  }
+}
+.card:hover .card__text {
+  opacity: 1;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

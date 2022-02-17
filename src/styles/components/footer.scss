@@ -1,0 +1,52 @@
+@import "../colors";
+@import "../margins";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: $margin-sm;
+  background: $color-dark;
+  width: 100%;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-links {
+    display: flex;
+    margin: $margin-sm 0;
+
+    .social-link {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .social-link,
+    .social-link svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .social-link:hover {
+      color: darken($color-lightest, 7.5%);
+    }
+
+    .social-link:not(:last-child) {
+      margin-right: $margin-sm;
+    }
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    color: $color-lightest;
+
+    svg {
+      margin-left: 5px;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

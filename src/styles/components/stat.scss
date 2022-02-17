@@ -1,0 +1,52 @@
+@import "../colors";
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 33%;
+  padding: 1rem 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  border-radius: 6px;
+
+  &-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    color: $color-highlight-light;
+  }
+
+  &-heart-container {
+    margin-left: 0.5rem;
+  }
+
+  &-heart {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &:hover {
+    background-color: darken(#282c33, 5%);
+  }
+
+  @media (hover: none) {
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    justify-content: center;
+    flex-basis: 50%;
+
+    &:nth-child(even),
+    &:nth-child(odd) {
+      padding: 1rem 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-basis: 100%;
+  }
+}

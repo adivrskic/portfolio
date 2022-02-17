@@ -1,0 +1,63 @@
+@import "../colors";
+@import "../sizes";
+@import "../margins";
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background: $color-dark;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $header-width;
+    color: $color-lightest;
+    padding-left: $margin-sm;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  nav {
+    display: flex;
+    height: 100%;
+  }
+
+  ul {
+    display: flex;
+    height: 100%;
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    li a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
+      color: $color-lightest;
+      padding: 0 $margin-sm;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s ease-in-out;
+    }
+
+    li a:hover {
+      background-color: $color-darkest;
+    }
+
+    li.active a {
+      border-bottom: 3px solid $color-highlight-light;
+    }
+  }
+}
