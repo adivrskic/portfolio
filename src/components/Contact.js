@@ -1,5 +1,4 @@
 import React from "react";
-import { IoCodeWorking } from "react-icons/io5";
 import "../styles/components/contact.scss";
 
 function Contact() {

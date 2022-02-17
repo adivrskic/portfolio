@@ -1,14 +1,5 @@
 import React from "react";
 import Stat from "../components/Stat";
-import Tooltip from "../components/Tooltip";
-import {
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoJavascript,
-  IoLogoElectron,
-  IoLogoPython,
-  IoLogoReact,
-} from "react-icons/io5";
 import { stats } from "../data/stats";
 import "../styles/components/profile.scss";
 

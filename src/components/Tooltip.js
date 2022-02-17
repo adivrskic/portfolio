@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/components/tooltip.scss";
 function Tooltip({ open, handleTooltipClick, heading, text }) {
   return (
