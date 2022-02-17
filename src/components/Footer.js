@@ -23,7 +23,7 @@ function Footer() {
           >
             <IoLogoLinkedin />
           </a>
-          <a className="social-link" href="/">
+          <a className="social-link" href="/steam">
             <IoLogoSteam />
           </a>
           <a className="social-link" href="mailto:adivrskic123@gmail.com">
