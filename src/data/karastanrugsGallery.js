@@ -1,7 +1,7 @@
 export const karastanrugsGallery = [
   {
     src: "images/kr1.png",
-    thumbnail: "../../public/images/kr1.png",
+    thumbnail: "images/kr1.PNG",
     thumbnailWidth: 500,
     thumbnailHeight: 350,
   },
