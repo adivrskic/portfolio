@@ -14,19 +14,28 @@ function Footer() {
       <div className="footer-content">
         <a href="#top">Back to Top</a>
         <div className="social-links">
-          <a className="social-link" href="https://github.com/adivrskic">
+          <a
+            className="social-link"
+            href="https://github.com/adivrskic"
+            aria-label="GitHub"
+          >
             <IoLogoGithub />
           </a>
           <a
             className="social-link"
             href="https://www.linkedin.com/in/adi-vrskic-48758213b/"
+            aria-label="LinkedIn"
           >
             <IoLogoLinkedin />
           </a>
-          <a className="social-link" href="/steam">
+          <a className="social-link" href="/steam" aria-label="Steam">
             <IoLogoSteam />
           </a>
-          <a className="social-link" href="mailto:adivrskic123@gmail.com">
+          <a
+            className="social-link"
+            href="mailto:adivrskic123@gmail.com"
+            aria-label="EMail"
+          >
             <IoMail />
           </a>
         </div>
