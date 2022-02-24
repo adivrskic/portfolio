@@ -4,7 +4,6 @@ import * as Icons from "react-icons/io5";
 import "../styles/components/stat.scss";
 
 function Stat({ icon, hearts, tooltipHeader, tooltipText }) {
-  console.log(icon, hearts, tooltipHeader, tooltipText);
   const [open, setOpen] = useState(false);
 
   const handleStatClick = () => {

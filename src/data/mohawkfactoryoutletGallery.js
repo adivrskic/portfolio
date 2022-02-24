@@ -1,25 +1,25 @@
 export const mohawkfactoryoutletGallery = [
   {
-    src: "images/mfo1.PNG",
-    thumbnail: "images/mfo1.PNG",
+    src: "images/mfo1.jpg",
+    thumbnail: "images/mfo1.jpg",
     thumbnailWidth: 600,
     thumbnailHeight: 350,
   },
   {
-    src: "images/mfo4.PNG",
-    thumbnail: "images/mfo4.PNG",
+    src: "images/mfo4.jpg",
+    thumbnail: "images/mfo4.jpg",
     thumbnailWidth: 150,
     thumbnailHeight: 350,
   },
   {
-    src: "images/mfo3.PNG",
-    thumbnail: "images/mfo3.PNG",
+    src: "images/mfo3.jpg",
+    thumbnail: "images/mfo3.jpg",
     thumbnailWidth: 150,
     thumbnailHeight: 350,
   },
   {
-    src: "images/mfo2.PNG",
-    thumbnail: "images/mfo2.PNG",
+    src: "images/mfo2.jpg",
+    thumbnail: "images/mfo2.jpg",
     thumbnailWidth: 500,
     thumbnailHeight: 350,
   },
