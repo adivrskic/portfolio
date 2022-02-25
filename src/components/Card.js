@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoImages } from "react-icons/io5";
 import GalleryContainer from "./GalleryContainer";
 import "../styles/components/card.scss";
 
