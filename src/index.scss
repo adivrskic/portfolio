@@ -64,7 +64,7 @@ ol {
   }
 
   &:hover {
-    background-color: darken($color-highlight-light, 7.5%);
+    background-color: lighten($color-highlight-light, 15%);
   }
 }
 

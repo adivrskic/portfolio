@@ -8,7 +8,7 @@ function Profile() {
     <section id="profile" className="main-container">
       <h2>Profile</h2>
       <div className="profile-content">
-        <div class="profile-content__info">
+        <div className="profile-content__info">
           <img
             className="profile-content__image"
             src="images/selfie.jfif"
@@ -22,7 +22,7 @@ function Profile() {
           </p>
         </div>
 
-        <div class="profile-content__stats">
+        <div className="profile-content__stats">
           {stats.map(({ icon, hearts, tooltipHeader, tooltipText }) => (
             <Stat
               icon={icon}
@@ -33,7 +33,7 @@ function Profile() {
           ))}
         </div>
 
-        <div class="profile-content__logos">
+        <div className="profile-content__logos">
           <img src="/images/shopify-logo.png" alt="Shopify Logo" />
           <img src="/images/squarespace-logo.png" alt="Squarespace Logo" />
         </div>
