@@ -3,7 +3,7 @@ import { IoImages } from "react-icons/io5";
 import GalleryContainer from "./GalleryContainer";
 import "../styles/components/card.scss";
 
-function Card({ bg, gallery, overlayText, alt }) {
+function Card({ bg, gallery, alt }) {
   const [galleryOpen, setGalleryOpen] = useState(false);
 
   const toggleGallery = () => {
@@ -12,18 +12,9 @@ function Card({ bg, gallery, overlayText, alt }) {
 
   return (
     <>
-      <div className="card">
-        <div className="card__overlay"></div>
+      <div className="card" onClick={() => toggleGallery()}>
         <img className="card__image" src={bg} alt={alt} />
-        <div className="card__content">
-          {overlayText && <p className="card__text">{overlayText}</p>}
-          {gallery?.length && (
-            <button className="button" onClick={() => toggleGallery()}>
-              <IoImages className="card__gallery icon" />
-              View Gallery
-            </button>
-          )}
-        </div>
+        <div className="card__content"></div>
       </div>
 
       <GalleryContainer

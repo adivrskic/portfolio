@@ -13,13 +13,11 @@ function Work() {
           <Card
             bg={"images/kr1.jpg"}
             gallery={karastanrugsGallery}
-            overlayText={"Karastan Rugs"}
             alt="Karastan Rugs"
           />
           <Card
             bg={"images/mfo2.jpg"}
             gallery={mohawkfactoryoutletGallery}
-            overlayText={"Mohawk Factory Outlet"}
             alt="Mohawk Factory Outlet"
           />
         </div>
