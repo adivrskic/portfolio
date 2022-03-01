@@ -1,4 +1,6 @@
+@import "../sizes";
+
 .games-content {
-  max-width: 800px;
   width: 100%;
+  max-width: $content-width;
 }

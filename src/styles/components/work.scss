@@ -1,4 +1,6 @@
+@import "../sizes";
+
 .work-content {
   width: 100%;
-  max-width: 800px;
+  max-width: $content-width;
 }

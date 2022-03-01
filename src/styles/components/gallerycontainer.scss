@@ -1,5 +1,6 @@
 @import "../colors";
 @import "../margins";
+@import "../sizes";
 
 .gallery {
   position: fixed;
@@ -7,7 +8,7 @@
   left: 50%;
   transform: translate(-50%, 100%);
   width: calc(100% - 2rem);
-  max-width: 800px;
+  max-width: $content-width;
   height: calc(100% - 2rem - 60px);
   z-index: -1;
   background-color: $color-darkest;

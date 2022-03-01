@@ -1,9 +1,12 @@
+@import "../sizes";
+
 .contact-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: $content-width;
 
   p {
     margin: 2.5rem auto;
