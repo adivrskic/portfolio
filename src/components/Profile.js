@@ -11,7 +11,7 @@ function Profile() {
         <div className="profile-content__info">
           <img
             className="profile-content__image"
-            src="images/selfie.jfif"
+            src="images/selfie.webp"
             alt="Headshot of Adi Vrskic"
           />
           <p>
@@ -34,8 +34,8 @@ function Profile() {
         </div>
 
         <div className="profile-content__logos">
-          <img src="/images/shopify-logo.png" alt="Shopify Logo" />
-          <img src="/images/squarespace-logo.png" alt="Squarespace Logo" />
+          <img src="/images/shopify-logo.webp" alt="Shopify Logo" />
+          <img src="/images/squarespace-logo.webp" alt="Squarespace Logo" />
         </div>
       </div>
     </section>

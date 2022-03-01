@@ -11,12 +11,12 @@ function Work() {
       <div className="work-content">
         <div className="card-container">
           <Card
-            bg={"images/kr1.jpg"}
+            bg={"images/kr1.webp"}
             gallery={karastanrugsGallery}
             alt="Karastan Rugs"
           />
           <Card
-            bg={"images/mfo2.jpg"}
+            bg={"images/mfo2.webp"}
             gallery={mohawkfactoryoutletGallery}
             alt="Mohawk Factory Outlet"
           />

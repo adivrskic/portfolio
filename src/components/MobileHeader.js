@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { nav } from "../data/nav";
 import "../styles/components/mobileheader.scss";
 
 function MobileHeader() {
@@ -8,6 +9,7 @@ function MobileHeader() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
   return (
     <div className="mobile-header">
       <h1>Adi Vrskic</h1>
@@ -20,26 +22,13 @@ function MobileHeader() {
       </div>
       <nav className={`mobile-header__nav ${menuOpen && "active"}`}>
         <ul>
-          <li>
-            <a href="#profile" onClick={() => toggleMenu()}>
-              Profile
-            </a>
-          </li>
-          <li>
-            <a href="#work" onClick={() => toggleMenu()}>
-              Work
-            </a>
-          </li>
-          <li>
-            <a href="#games" onClick={() => toggleMenu()}>
-              Games
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={() => toggleMenu()}>
-              Contact
-            </a>
-          </li>
+          {nav.map((item) => (
+            <li key={item.key}>
+              <a href={item.link} onClick={() => toggleMenu()}>
+                {item.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
