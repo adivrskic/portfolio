@@ -78,7 +78,8 @@ ol {
     &:hover {
       border: 1px solid lighten($color-highlight-light, 12%);
       color: $color-dark;
-      background-color: lighten($color-highlight-light, 15%);
+      background-color: $color-highlight-light;
+      box-shadow: 0 2px 14px $color-highlight-light;
     }
   }
 }
