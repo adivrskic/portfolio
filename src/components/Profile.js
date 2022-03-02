@@ -1,15 +1,29 @@
 import React, { useState } from "react";
 import Stat from "../components/Stat";
-import { stats, frontendStats, backendStats, gameStats } from "../data/stats";
+import {
+  stats,
+  frontendStats,
+  backendStats,
+  gameStats,
+  techStats,
+} from "../data/stats";
+import { statButtons } from "../data/buttons";
 import "../styles/components/profile.scss";
 
 function Profile() {
-  const [renderedStats, setRenderedStats] = useState(stats);
-  const [active, setActive] = useState("stats");
+  const [renderedStats, setRenderedStats] = useState(frontendStats);
+  const [active, setActive] = useState("frontendStats");
+
+  const stringToData = {
+    stats: stats,
+    frontendStats: frontendStats,
+    backendStats: backendStats,
+    gameStats: gameStats,
+    techStats: techStats,
+  };
 
   const filterStats = (e, filter) => {
-    console.log(filter, e.target.id);
-    setRenderedStats(filter);
+    setRenderedStats(stringToData[filter]);
     setActive(e.target.id);
   };
 
@@ -32,42 +46,17 @@ function Profile() {
         </div>
 
         <div className="profile-content__filters">
-          <button
-            id="stats"
-            className={`button button--inverse ${
-              active === "stats" ? "active" : ""
-            }`}
-            onClick={(e) => filterStats(e, stats)}
-          >
-            All
-          </button>
-          <button
-            id="frontendStats"
-            className={`button button--inverse ${
-              active === "frontendStats" ? "active" : ""
-            }`}
-            onClick={(e) => filterStats(e, frontendStats)}
-          >
-            Frontend
-          </button>
-          <button
-            id="backendStats"
-            className={`button button--inverse ${
-              active === "backendStats" ? "active" : ""
-            }`}
-            onClick={(e) => filterStats(e, backendStats)}
-          >
-            Backend
-          </button>
-          <button
-            id="gameStats"
-            className={`button button--inverse ${
-              active === "gameStats" ? "active" : ""
-            }`}
-            onClick={(e) => filterStats(e, gameStats)}
-          >
-            Games
-          </button>
+          {statButtons.map(({ id, displayName }) => (
+            <button
+              id={id}
+              className={`button button--inverse ${
+                active === id ? "active" : ""
+              }`}
+              onClick={(e) => filterStats(e, id)}
+            >
+              {displayName}
+            </button>
+          ))}
         </div>
 
         <div className="profile-content__stats">

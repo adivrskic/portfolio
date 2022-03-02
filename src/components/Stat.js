@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Tooltip from "./Tooltip";
-import * as Icons from "react-icons/io5";
+import * as Icons from "react-icons/di";
+import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import "../styles/components/stat.scss";
 
 function Stat({ icon, hearts, tooltipHeader, tooltipText }) {
@@ -11,8 +12,8 @@ function Stat({ icon, hearts, tooltipHeader, tooltipText }) {
   };
 
   const IoIcon = Icons?.[icon];
-  const IoHeartIcon = Icons?.["IoHeart"];
-  const IoHeartOutlineIcon = Icons?.["IoHeartOutline"];
+  const IoHeartIcon = IoHeart;
+  const IoHeartOutlineIcon = IoHeartOutline;
 
   return (
     <div className="stat" onClick={() => handleStatClick()}>
