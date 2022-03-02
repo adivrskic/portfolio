@@ -4,6 +4,7 @@ export const karastanrugsGallery = [
     thumbnail: "images/kr1.webp",
     thumbnailWidth: 500,
     thumbnailHeight: 350,
+    alt: "Karastan Rugs Homepage",
   },
   {
     src: "images/kr9.webp",

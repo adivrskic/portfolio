@@ -10,9 +10,9 @@ function Stat({ icon, hearts, tooltipHeader, tooltipText }) {
     setOpen(!open);
   };
 
-  const IoIcon = Icons[icon];
-  const IoHeartIcon = Icons["IoHeart"];
-  const IoHeartOutlineIcon = Icons["IoHeartOutline"];
+  const IoIcon = Icons?.[icon];
+  const IoHeartIcon = Icons?.["IoHeart"];
+  const IoHeartOutlineIcon = Icons?.["IoHeartOutline"];
 
   return (
     <div className="stat" onClick={() => handleStatClick()}>

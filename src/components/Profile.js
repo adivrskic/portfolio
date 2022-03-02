@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Stat from "../components/Stat";
-import { stats } from "../data/stats";
+import { stats, frontendStats, backendStats, gameStats } from "../data/stats";
 import "../styles/components/profile.scss";
 
 function Profile() {
+  const [renderedStats, setRenderedStats] = useState(stats);
+  const [active, setActive] = useState("stats");
+
+  const filterStats = (e, filter) => {
+    console.log(filter, e.target.id);
+    setRenderedStats(filter);
+    setActive(e.target.id);
+  };
+
   return (
     <section id="profile" className="main-container">
       <h2>Profile</h2>
@@ -22,8 +31,47 @@ function Profile() {
           </p>
         </div>
 
+        <div className="profile-content__filters">
+          <button
+            id="stats"
+            className={`button button--inverse ${
+              active === "stats" ? "active" : ""
+            }`}
+            onClick={(e) => filterStats(e, stats)}
+          >
+            All
+          </button>
+          <button
+            id="frontendStats"
+            className={`button button--inverse ${
+              active === "frontendStats" ? "active" : ""
+            }`}
+            onClick={(e) => filterStats(e, frontendStats)}
+          >
+            Frontend
+          </button>
+          <button
+            id="backendStats"
+            className={`button button--inverse ${
+              active === "backendStats" ? "active" : ""
+            }`}
+            onClick={(e) => filterStats(e, backendStats)}
+          >
+            Backend
+          </button>
+          <button
+            id="games"
+            className={`button button--inverse ${
+              active === "gameStats" ? "active" : ""
+            }`}
+            onClick={(e) => filterStats(e, gameStats)}
+          >
+            Games
+          </button>
+        </div>
+
         <div className="profile-content__stats">
-          {stats.map(({ icon, hearts, tooltipHeader, tooltipText }) => (
+          {renderedStats.map(({ icon, hearts, tooltipHeader, tooltipText }) => (
             <Stat
               icon={icon}
               hearts={hearts}
