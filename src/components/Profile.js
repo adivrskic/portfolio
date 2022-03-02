@@ -60,7 +60,7 @@ function Profile() {
             Backend
           </button>
           <button
-            id="games"
+            id="gameStats"
             className={`button button--inverse ${
               active === "gameStats" ? "active" : ""
             }`}
