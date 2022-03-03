@@ -58,7 +58,7 @@ export const stats = [
     icon: "DiNodejsSmall",
     hearts: 3,
     tooltipHeader: "Node JS",
-    tooltipText: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    tooltipText: "Created API to fetch github information from.",
   },
   {
     icon: "DiDatabase",
@@ -70,13 +70,13 @@ export const stats = [
     icon: "DiCode",
     hearts: 3,
     tooltipHeader: "Unity",
-    tooltipText: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    tooltipText: "Comfortable working on and creating 2D and 3D games.",
   },
   {
     icon: "DiCode",
     hearts: 4,
     tooltipHeader: "C#",
-    tooltipText: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    tooltipText: "Used primarily for game dev on Unity.",
   },
   {
     icon: "DiGoogleAnalytics",
@@ -157,7 +157,7 @@ export const backendStats = [
     icon: "DiNodejsSmall",
     hearts: 3,
     tooltipHeader: "Node JS",
-    tooltipText: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    tooltipText: "Created API to fetch github information from.",
   },
   {
     icon: "DiDatabase",
@@ -172,13 +172,13 @@ export const gameStats = [
     icon: "DiCode",
     hearts: 3,
     tooltipHeader: "Unity",
-    tooltipText: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    tooltipText: "Comfortable working on and creating 2D and 3D games.",
   },
   {
     icon: "DiCode",
     hearts: 4,
     tooltipHeader: "C#",
-    tooltipText: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    tooltipText: "Used primarily for game dev on Unity.",
   },
 ];
 

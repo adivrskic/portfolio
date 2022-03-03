@@ -11,7 +11,7 @@ function Banner() {
           React, Shopify and Squarespace.
         </p>
         <a className="button" href="mailto:adivrskic123@gmail.com">
-          Contact Me
+          Let's work together
         </a>
       </div>
     </div>
