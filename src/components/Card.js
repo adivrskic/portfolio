@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoChevronForward } from "react-icons/io5";
 import "../styles/components/card.scss";
 
 function Card({ bg, alt }) {
@@ -19,8 +18,7 @@ function Card({ bg, alt }) {
         )}
 
         <div className="card__content">
-          <h4>{alt}</h4>
-          <IoChevronForward />
+          <h3>{alt}</h3>
         </div>
       </div>
     </>
