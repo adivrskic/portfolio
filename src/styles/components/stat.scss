@@ -50,3 +50,15 @@
     flex-basis: 100%;
   }
 }
+
+body.lightmode {
+  .stat {
+    &-icon {
+      color: $color-lightmode-highlight;
+    }
+
+    &:hover {
+      background-color: $color-lightmode-bg-dark;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/components/banner.scss";
+
 function Banner() {
   return (
     <div id="banner" className="banner">

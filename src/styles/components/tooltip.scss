@@ -4,8 +4,8 @@
 .tooltip {
   position: absolute;
   top: 100%;
-  background-color: $color-lightest;
-  color: $color-dark;
+  background-color: $color-darkmode-text-light;
+  color: $color-darkmode-text-dark;
   border-radius: 6px;
   padding: $margin-sm;
   opacity: 0;
@@ -46,14 +46,28 @@
 
   &::after {
     border-color: rgba(238, 238, 238, 0);
-    border-bottom-color: $color-lightest;
+    border-bottom-color: $color-darkmode-text-light;
     border-width: 15px;
     margin-left: -15px;
   }
   &::before {
     border-color: rgba(204, 204, 204, 0);
-    border-bottom-color: $color-lightest;
+    border-bottom-color: $color-darkmode-text-light;
     border-width: 16px;
     margin-left: -16px;
+  }
+}
+
+body.lightmode {
+  .tooltip {
+    background-color: $color-lightmode-text-light;
+    color: $color-lightmode-text-dark;
+
+    &::after {
+      border-bottom-color: $color-lightmode-text-light;
+    }
+    &::before {
+      border-bottom-color: $color-lightmode-text-light;
+    }
   }
 }

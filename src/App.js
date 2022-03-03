@@ -7,6 +7,7 @@ import Work from "./components/Work";
 import Games from "./components/Games";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { StateProvider } from "./context/StateProvider";
 import { MOBILE_BREAKPOINT } from "./constants.js";
 
 function App() {
@@ -21,22 +22,24 @@ function App() {
   });
 
   return (
-    <div className="app">
-      <div id="top"></div>
+    <StateProvider>
+      <div className="app">
+        <div id="top"></div>
 
-      {width > mobileBreakpoint && <Header />}
-      {width <= mobileBreakpoint && <MobileHeader />}
+        {width > mobileBreakpoint && <Header />}
+        {width <= mobileBreakpoint && <MobileHeader />}
 
-      <main className="main">
-        <Banner />
-        <Profile />
-        <Work />
-        <Games />
-        <Contact />
-      </main>
+        <main className="main">
+          <Banner />
+          <Profile />
+          <Work />
+          <Games />
+          <Contact />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </StateProvider>
   );
 }
 

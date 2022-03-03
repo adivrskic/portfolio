@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -14,7 +15,6 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,7 +34,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: $color-lightest;
+  color: $color-darkmode-text-light;
 }
 
 ul,
@@ -47,14 +47,13 @@ ol {
 .button {
   padding: 0.75rem 1.75rem;
   border-radius: 2.5rem;
-  color: $color-dark;
-  background-color: $color-highlight-light;
+  color: $color-darkmode-text-dark;
+  background-color: $color-darkmode-highlight;
   font-weight: 600;
   cursor: pointer;
   border: none;
-  font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  box-shadow: 0 2px 11px $color-highlight-light;
+  box-shadow: 0 2px 11px $color-darkmode-highlight;
   transition: all 0.2s ease-in-out;
 
   .icon {
@@ -64,28 +63,28 @@ ol {
   }
 
   &:hover {
-    background-color: lighten($color-highlight-light, 12%);
-    box-shadow: 0 2px 14px $color-highlight-light;
+    background-color: lighten($color-darkmode-highlight, 12%);
+    box-shadow: 0 2px 14px $color-darkmode-highlight;
   }
 
   &--inverse {
-    color: $color-highlight-light;
-    background-color: $color-dark;
-    border: 1px solid $color-highlight-light;
+    color: $color-darkmode-highlight;
+    background-color: $color-darkmode-bg-light;
+    border: 1px solid $color-darkmode-highlight;
     box-shadow: none;
 
     &.active,
     &:hover {
-      border: 1px solid lighten($color-highlight-light, 12%);
-      color: $color-dark;
-      background-color: $color-highlight-light;
-      box-shadow: 0 2px 14px $color-highlight-light;
+      border: 1px solid lighten($color-darkmode-highlight, 12%);
+      color: $color-darkmode-text-dark;
+      background-color: $color-darkmode-highlight;
+      box-shadow: 0 2px 14px $color-darkmode-highlight;
     }
   }
 }
 
 .section-heading {
-  color: $color-lightest;
+  color: $color-darkmode-text-light;
   font-weight: 600;
   font-size: 2.5rem;
 }
@@ -95,7 +94,7 @@ ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $color-lightest;
+  color: $color-darkmode-text-light;
 }
 
 .main-container {
@@ -108,11 +107,11 @@ ol {
 }
 
 .main-container:nth-child(even) {
-  background-color: lighten($color-darkest, 5%);
+  background-color: $color-darkmode-bg-light;
 }
 
 .main-container:nth-child(odd) {
-  background-color: $color-darkest;
+  background-color: $color-darkmode-bg-dark;
 }
 
 .card-container {
@@ -123,12 +122,56 @@ ol {
   margin-top: $margin-md;
 }
 
-.UNDER-CONSTRUCTION {
-  display: flex;
-  width: 200px;
-  max-width: 95%;
-  height: 200px;
-  justify-content: center;
-  align-items: center;
-  color: $color-highlight-light;
+body.lightmode {
+  a {
+    color: $color-lightmode-text-dark;
+  }
+
+  .button {
+    color: $color-lightmode-text-light;
+    background-color: $color-lightmode-highlight;
+    box-shadow: 0 2px 11px $color-lightmode-highlight;
+
+    &:hover {
+      background-color: lighten($color-lightmode-highlight, 12%);
+      box-shadow: 0 2px 14px $color-lightmode-highlight;
+    }
+
+    &--inverse {
+      color: $color-lightmode-highlight;
+      background-color: $color-lightmode-bg-light;
+      border: 1px solid $color-lightmode-highlight;
+      box-shadow: none;
+
+      &.active,
+      &:hover {
+        border: 1px solid lighten($color-lightmode-highlight, 12%);
+        color: $color-lightmode-text-light;
+        background-color: $color-lightmode-highlight;
+        box-shadow: 0 2px 14px $color-lightmode-highlight;
+      }
+    }
+  }
+
+  .section-heading {
+    color: $color-lightmode-text-dark;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-lightmode-text-dark;
+  }
+
+  .main-container:nth-child(even) {
+    background-color: $color-lightmode-bg-light;
+  }
+
+  .main-container:nth-child(odd) {
+    background-color: $color-lightmode-bg-dark;
+  }
 }

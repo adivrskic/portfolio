@@ -5,7 +5,6 @@
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../../../public/images/bg.webp");
-
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,7 +22,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $color-lightest;
+    color: $color-darkmode-text-light;
     width: 100%;
     max-width: calc(#{$content-width} + 1rem);
     padding: 1rem;
@@ -35,5 +34,16 @@
 
   @media screen and (max-width: 800px) {
     height: 600px;
+  }
+}
+
+body.lightmode {
+  .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("../../../public/images/bglight.webp");
+
+    &__content {
+      color: $color-lightest;
+    }
   }
 }

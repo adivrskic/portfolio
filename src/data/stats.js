@@ -21,7 +21,7 @@ export const stats = [
       "Expedites the writing of CSS and makes it easier to write maintainable and reusable styles.",
   },
   {
-    icon: "DiJavascript",
+    icon: "DiJsBadge",
     hearts: 5,
     tooltipHeader: "Javascript",
     tooltipText:
@@ -117,7 +117,7 @@ export const frontendStats = [
       "Expedites the writing of CSS and makes it easier to write maintainable and reusable styles.",
   },
   {
-    icon: "DiJavascript",
+    icon: "DiJsBadge",
     hearts: 5,
     tooltipHeader: "Javascript",
     tooltipText:

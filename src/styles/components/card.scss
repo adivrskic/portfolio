@@ -17,7 +17,7 @@
     &-placeholder {
       width: 100%;
       height: calc(100% - 25px);
-      background-color: $color-light;
+      background-color: $color-darkmode-placeholder;
     }
   }
 
@@ -41,12 +41,13 @@
     flex-basis: 100%;
   }
 }
-.card:hover .card__text {
-  opacity: 1;
-}
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body.lightmode {
+  .card {
+    &__image {
+      &-placeholder {
+        background-color: $color-lightmode-placeholder;
+      }
+    }
+  }
 }

@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   padding: $margin-sm;
-  background: $color-dark;
+  background: $color-darkmode-bg-light;
   width: 100%;
 
   .footer-content {
@@ -30,7 +30,7 @@
     }
 
     .social-link:hover {
-      color: darken($color-lightest, 7.5%);
+      color: darken($color-darkmode-text-light, 7.5%);
     }
 
     .social-link:not(:last-child) {
@@ -41,12 +41,28 @@
   p {
     display: flex;
     align-items: center;
-    color: $color-lightest;
+    color: $color-darkmode-text-light;
 
     svg {
       margin-left: 5px;
       width: 1.5rem;
       height: 1.5rem;
+    }
+  }
+}
+
+body.lightmode {
+  .footer {
+    background: $color-lightmode-bg-light;
+
+    .social-links {
+      .social-link:hover {
+        color: darken($color-lightmode-text-dark, 7.5%);
+      }
+    }
+
+    p {
+      color: $color-lightmode-text-dark;
     }
   }
 }

@@ -8,9 +8,12 @@ import {
   techStats,
 } from "../data/stats";
 import { statButtons } from "../data/buttons";
+import { StateContext } from "../context/StateProvider";
 import "../styles/components/profile.scss";
 
 function Profile() {
+  const [{ isDarkTheme }] = React.useContext(StateContext);
+
   const [renderedStats, setRenderedStats] = useState(frontendStats);
   const [active, setActive] = useState("frontendStats");
 
@@ -71,8 +74,22 @@ function Profile() {
         </div>
 
         <div className="profile-content__logos">
-          <img src="/images/shopify-logo.webp" alt="Shopify Logo" />
-          <img src="/images/squarespace-logo.webp" alt="Squarespace Logo" />
+          <img
+            src={
+              isDarkTheme
+                ? "/images/shopify-darkmode.webp"
+                : "/images/shopify-lightmode.webp"
+            }
+            alt="Shopify Logo"
+          />
+          <img
+            src={
+              isDarkTheme
+                ? "/images/squarespace-darkmode.webp"
+                : "/images/squarespace-lightmode.webp"
+            }
+            alt="Squarespace Logo"
+          />
         </div>
       </div>
     </section>

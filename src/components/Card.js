@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoChevronForward } from "react-icons/io5";
 import "../styles/components/card.scss";
 
-function Card({ bg, gallery, alt }) {
+function Card({ bg, alt }) {
   const [galleryOpen, setGalleryOpen] = useState(false);
 
   const toggleGallery = () => {

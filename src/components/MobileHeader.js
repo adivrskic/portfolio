@@ -1,6 +1,13 @@
-import React, { useState } from "react";
-import { IoMenu, IoClose } from "react-icons/io5";
+import React, { useState, useEffect } from "react";
+import {
+  IoMenu,
+  IoClose,
+  IoSunnyOutline,
+  IoMoonOutline,
+} from "react-icons/io5";
 import { nav } from "../data/nav";
+import { StateContext } from "../context/StateProvider";
+
 import "../styles/components/mobileheader.scss";
 
 function MobileHeader() {
@@ -9,6 +16,16 @@ function MobileHeader() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const [{ isDarkTheme }, dispatch] = React.useContext(StateContext);
+
+  useEffect(() => {
+    if (!isDarkTheme) {
+      document.body.classList.add("lightmode");
+    } else {
+      document.body.classList.remove("lightmode");
+    }
+  }, [isDarkTheme]);
 
   return (
     <div className="mobile-header">
@@ -30,6 +47,12 @@ function MobileHeader() {
             </li>
           ))}
         </ul>
+        <div
+          className="mobile-header__mode"
+          onClick={() => dispatch({ type: "TOGGLE_THEME" })}
+        >
+          {isDarkTheme ? <IoMoonOutline /> : <IoSunnyOutline />}
+        </div>
       </nav>
     </div>
   );

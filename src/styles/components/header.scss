@@ -7,7 +7,7 @@
   top: 0;
   display: flex;
   justify-content: center;
-  background: $color-dark;
+  background: $color-darkmode-bg-light;
   width: 100%;
   z-index: 999;
   height: $header-height;
@@ -18,8 +18,13 @@
     justify-content: space-between;
     align-items: center;
     width: $header-width;
-    color: $color-lightest;
+    color: $color-darkmode-text-light;
     padding-left: $margin-sm;
+  }
+
+  &__nav-container {
+    display: flex;
+    height: 100%;
   }
 
   h2 {
@@ -46,18 +51,61 @@
       align-items: center;
       height: 100%;
       text-decoration: none;
-      color: $color-lightest;
       padding: 0 $margin-sm;
       border-bottom: 3px solid transparent;
       transition: all 0.2s ease-in-out;
     }
 
     li a:hover {
-      background-color: $color-darkest;
+      background-color: $color-darkmode-bg-dark;
     }
 
     li.active a {
-      border-bottom: 3px solid $color-highlight-light;
+      border-bottom: 3px solid $color-darkmode-highlight;
+    }
+  }
+
+  &__mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    cursor: pointer;
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      color: $color-darkmode-highlight;
+    }
+  }
+}
+
+body.lightmode {
+  .header {
+    background: $color-lightmode-bg-light;
+
+    &__content {
+      color: $color-lightmode-text-dark;
+    }
+
+    ul {
+      li a {
+        color: $color-lightmode-text-dark;
+      }
+
+      li a:hover {
+        background-color: $color-lightmode-bg-dark;
+      }
+
+      li.active a {
+        border-bottom: 3px solid $color-lightmode-highlight;
+      }
+    }
+
+    &__mode {
+      svg {
+        color: $color-lightmode-highlight;
+      }
     }
   }
 }
