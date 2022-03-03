@@ -1,5 +1,4 @@
 import React from "react";
-import { DiCode } from "react-icons/di";
 import Card from "./Card";
 import "../styles/components/games.scss";
 

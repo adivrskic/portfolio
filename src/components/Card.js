@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import GalleryContainer from "./GalleryContainer";
 import { IoChevronForward } from "react-icons/io5";
 import "../styles/components/card.scss";
 
@@ -24,13 +23,6 @@ function Card({ bg, gallery, alt }) {
           <IoChevronForward />
         </div>
       </div>
-
-      {/* <GalleryContainer
-        title={alt}
-        galleryImages={gallery}
-        galleryOpen={galleryOpen}
-        onGalleryClose={() => toggleGallery()}
-      /> */}
     </>
   );
 }
