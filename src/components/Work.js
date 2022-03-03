@@ -20,6 +20,7 @@ function Work() {
             gallery={mohawkfactoryoutletGallery}
             alt="Mohawk Factory Outlet"
           />
+          <Card bg={null} gallery={null} alt="Lorem Ipsum" />
         </div>
       </div>
     </section>
