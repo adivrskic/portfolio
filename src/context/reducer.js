@@ -14,5 +14,7 @@ export const reducer = (state, action) => {
 };
 
 export const initialState = {
-  isDarkTheme: true,
+  isDarkTheme: localStorage.getItem("IS_DARK_THEME")
+    ? localStorage.getItem("IS_DARK_THEME") === "true"
+    : "true",
 };

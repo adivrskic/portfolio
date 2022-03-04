@@ -9,11 +9,13 @@ function Header() {
   const [{ isDarkTheme }, dispatch] = React.useContext(StateContext);
 
   useEffect(() => {
-    if (!isDarkTheme) {
-      document.body.classList.add("lightmode");
-    } else {
+    if (isDarkTheme) {
       document.body.classList.remove("lightmode");
+    } else {
+      document.body.classList.add("lightmode");
     }
+
+    localStorage.setItem("IS_DARK_THEME", isDarkTheme);
   }, [isDarkTheme]);
 
   // Doesn't work on Chrome??

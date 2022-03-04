@@ -14,9 +14,6 @@ import "../styles/components/profile.scss";
 function Profile() {
   const [{ isDarkTheme }] = React.useContext(StateContext);
 
-  const [renderedStats, setRenderedStats] = useState(frontendStats);
-  const [active, setActive] = useState("frontendStats");
-
   const stringToData = {
     stats: stats,
     frontendStats: frontendStats,
@@ -25,9 +22,17 @@ function Profile() {
     techStats: techStats,
   };
 
+  const [renderedStats, setRenderedStats] = useState(
+    stringToData[localStorage.getItem("ACTIVE_STAT") || "frontendStats"]
+  );
+  const [active, setActive] = useState(
+    localStorage.getItem("ACTIVE_STAT") || "frontendStats"
+  );
+
   const filterStats = (e, filter) => {
     setRenderedStats(stringToData[filter]);
     setActive(e.target.id);
+    localStorage.setItem("ACTIVE_STAT", e.target.id);
   };
 
   return (
