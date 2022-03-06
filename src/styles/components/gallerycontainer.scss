@@ -3,23 +3,12 @@
 @import "../sizes";
 
 .gallery {
-  position: fixed;
-  top: calc(1rem + 60px);
-  left: 50%;
-  transform: translate(-50%, 100%);
-  width: calc(100% - 2rem);
+  width: 100%;
   max-width: $content-width;
-  height: calc(100% - 2rem - 60px);
-  z-index: -1;
-  background-color: $color-darkest;
-  opacity: 0;
-  border-radius: 6px;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  transition: all 0.4s ease-in-out;
+
+  &:not(:last-of-type) {
+    margin-bottom: $margin-md;
+  }
 
   &.open {
     z-index: 999;
@@ -37,21 +26,29 @@
   }
 
   &__header {
-    text-align: center;
-    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
   }
 
-  &__grid {
-    overflow-y: scroll;
-    height: calc(100% - 61px);
+  img {
     width: 100%;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    height: 600px;
+    object-fit: cover;
   }
 
-  &::-webkit-scrollbar {
-    display: none;
+  @media screen and (max-width: 800px) {
+    &__header {
+      flex-direction: column;
+
+      a {
+        margin: $margin-sm 0 $margin-sm 0;
+      }
+    }
+
+    img {
+      height: 400px;
+    }
   }
 }

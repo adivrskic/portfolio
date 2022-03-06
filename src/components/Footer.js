@@ -16,6 +16,8 @@ function Footer() {
         <div className="social-links">
           <a
             className="social-link"
+            target="_blank"
+            rel="noreferrer"
             href="https://github.com/adivrskic"
             aria-label="GitHub"
           >
@@ -23,16 +25,26 @@ function Footer() {
           </a>
           <a
             className="social-link"
+            target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/adi-vrskic-48758213b/"
             aria-label="LinkedIn"
           >
             <IoLogoLinkedin />
           </a>
-          <a className="social-link" href="/steam" aria-label="Steam">
+          <a
+            className="social-link"
+            target="_blank"
+            rel="noreferrer"
+            href="/steam"
+            aria-label="Steam"
+          >
             <IoLogoSteam />
           </a>
           <a
             className="social-link"
+            target="_blank"
+            rel="noreferrer"
             href="mailto:adivrskic123@gmail.com"
             aria-label="EMail"
           >

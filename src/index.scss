@@ -1,5 +1,6 @@
 @import "styles/colors";
 @import "styles/margins";
+@import "styles/globals";
 
 *,
 *::before,
@@ -17,6 +18,22 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $color-darkmode-bg-dark;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $color-darkmode-highlight;
+    border-radius: 999px;
+  }
 }
 
 code {
@@ -48,7 +65,7 @@ ol {
   padding: 0.75rem 1.75rem;
   border-radius: 2.5rem;
   color: $color-darkmode-text-dark;
-  background-color: $color-darkmode-highlight;
+  background: $button-darkmode-bg;
   font-weight: 600;
   cursor: pointer;
   border: none;
@@ -63,21 +80,19 @@ ol {
   }
 
   &:hover {
-    background-color: lighten($color-darkmode-highlight, 12%);
-    box-shadow: 0 2px 14px $color-darkmode-highlight;
+    box-shadow: 0 2px 15px $color-darkmode-highlight;
   }
 
   &--inverse {
     color: $color-darkmode-highlight;
-    background-color: $color-darkmode-bg-light;
-    border: 1px solid $color-darkmode-highlight;
+    background: none;
     box-shadow: none;
+    border: 1px solid $color-darkmode-highlight;
 
     &.active,
     &:hover {
-      border: 1px solid lighten($color-darkmode-highlight, 12%);
       color: $color-darkmode-text-dark;
-      background-color: $color-darkmode-highlight;
+      background: $button-darkmode-bg;
       box-shadow: 0 2px 14px $color-darkmode-highlight;
     }
   }
@@ -129,7 +144,7 @@ body.lightmode {
 
   .button {
     color: $color-lightmode-text-light;
-    background-color: $color-lightmode-highlight;
+    background: $button-lightmode-bg;
     box-shadow: 0 2px 11px $color-lightmode-highlight;
 
     &:hover {
@@ -138,14 +153,13 @@ body.lightmode {
     }
 
     &--inverse {
-      color: $color-lightmode-highlight;
-      background-color: $color-lightmode-bg-light;
       border: 1px solid $color-lightmode-highlight;
+      color: $color-lightmode-highlight;
+      background: none;
       box-shadow: none;
 
       &.active,
       &:hover {
-        border: 1px solid lighten($color-lightmode-highlight, 12%);
         color: $color-lightmode-text-light;
         background-color: $color-lightmode-highlight;
         box-shadow: 0 2px 14px $color-lightmode-highlight;
@@ -173,5 +187,21 @@ body.lightmode {
 
   .main-container:nth-child(odd) {
     background-color: $color-lightmode-bg-dark;
+  }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $color-lightmode-bg-dark;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $color-lightmode-highlight;
+    border-radius: 999px;
   }
 }
