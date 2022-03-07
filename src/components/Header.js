@@ -18,7 +18,6 @@ function Header() {
     localStorage.setItem("IS_DARK_THEME", isDarkTheme);
   }, [isDarkTheme]);
 
-  // Doesn't work on Chrome??
   const scrollToAnchor = (anchor) => {
     const scrollDistance =
       document.getElementById(anchor).getBoundingClientRect().top +

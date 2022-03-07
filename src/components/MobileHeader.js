@@ -29,6 +29,19 @@ function MobileHeader() {
     localStorage.setItem("IS_DARK_THEME", isDarkTheme);
   }, [isDarkTheme]);
 
+  const scrollToAnchor = (anchor) => {
+    const scrollDistance =
+      document.getElementById(anchor).getBoundingClientRect().top +
+      window.scrollY;
+
+    window.scroll({
+      top: scrollDistance,
+      behavior: "smooth",
+    });
+
+    toggleMenu();
+  };
+
   return (
     <div className="mobile-header">
       <h1>Adi Vrskic</h1>
@@ -43,7 +56,7 @@ function MobileHeader() {
         <ul>
           {nav.map((item) => (
             <li key={item.key}>
-              <a href={item.link} onClick={() => toggleMenu()}>
+              <a href={item.link} onClick={() => scrollToAnchor(item.link)}>
                 {item.name}
               </a>
             </li>
