@@ -11,8 +11,10 @@ function Header() {
   useEffect(() => {
     if (isDarkTheme) {
       document.body.classList.remove("lightmode");
+      document.getElementById("favicon").href = "/favicon.ico";
     } else {
       document.body.classList.add("lightmode");
+      document.getElementById("favicon").href = "/favicon-lightmode.ico";
     }
 
     localStorage.setItem("IS_DARK_THEME", isDarkTheme);
