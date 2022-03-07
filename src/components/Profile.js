@@ -37,7 +37,7 @@ function Profile() {
 
   return (
     <section id="profile" className="main-container">
-      <h2>Profile</h2>
+      <h2 class="section-heading">Profile</h2>
       <div className="profile-content">
         <div className="profile-content__info">
           <img

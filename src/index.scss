@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  color: $color-darkmode-text-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -70,24 +71,24 @@ ol {
   cursor: pointer;
   border: none;
   font-size: 1rem;
-  box-shadow: 0 1px 6px $color-darkmode-highlight;
+  // box-shadow: 0 1px 6px $color-darkmode-highlight;
   transition: all 0.2s ease-in-out;
 
-  &:hover {
-    box-shadow: 0 1px 10px $color-darkmode-highlight;
-  }
+  // &:hover {
+  //   //box-shadow: 0 1px 10px $color-darkmode-highlight;
+  // }
 
   &--inverse {
     color: $color-darkmode-highlight;
     background: none;
-    box-shadow: none;
+    // box-shadow: none;
     border: 1px solid $color-darkmode-highlight;
 
     &.active,
     &:hover {
       color: $color-darkmode-text-dark;
       background: $button-darkmode-bg;
-      box-shadow: 0 1px 10px $color-darkmode-highlight;
+      //box-shadow: 0 1px 10px $color-darkmode-highlight;
     }
   }
 }
@@ -103,7 +104,6 @@ ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $color-darkmode-text-light;
 }
 
 .main-container {
@@ -113,6 +113,21 @@ ol {
   justify-content: center;
   width: 100%;
   padding: 6.0625em $margin-sm 6.0625em $margin-sm;
+
+  &.full-width {
+    padding: 6.025em 0;
+  }
+
+  &.theme-bg {
+    background: $section-darkmode-bg;
+    color: $color-darkmode-text-light;
+
+    .button {
+      border: 1px solid $color-darkmode-text-light;
+      color: $color-darkmode-text-light;
+      background: none;
+    }
+  }
 }
 
 .main-container:nth-child(even) {
@@ -132,6 +147,8 @@ ol {
 }
 
 body.lightmode {
+  color: $color-lightmode-text-dark;
+
   a {
     color: $color-lightmode-text-dark;
   }
@@ -139,40 +156,40 @@ body.lightmode {
   .button {
     color: $color-lightmode-text-light;
     background: $button-lightmode-bg;
-    box-shadow: 0 1px 6px $color-lightmode-highlight;
+    //box-shadow: 0 1px 6px $color-lightmode-highlight;
 
     &:hover {
       background-color: lighten($color-lightmode-highlight, 12%);
-      box-shadow: 0 1px 10px $color-lightmode-highlight;
+      //box-shadow: 0 1px 10px $color-lightmode-highlight;
     }
 
     &--inverse {
       border: 1px solid $color-lightmode-highlight;
       color: $color-lightmode-highlight;
       background: none;
-      box-shadow: none;
+      //box-shadow: none;
 
       &.active,
       &:hover {
         color: $color-lightmode-text-light;
         background-color: $color-lightmode-highlight;
-        box-shadow: 0 1px 10px $color-lightmode-highlight;
+        //box-shadow: 0 1px 10px $color-lightmode-highlight;
       }
     }
   }
 
-  .section-heading {
-    color: $color-lightmode-text-dark;
-    font-weight: 600;
-    font-size: 2.5rem;
+  .main-container:not(.theme-bg) {
+    .section-heading {
+      color: $color-lightmode-text-dark;
+    }
+
+    .main {
+      color: $color-lightmode-text-dark;
+    }
   }
 
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $color-lightmode-text-dark;
+  .main-container.theme-bg {
+    background: $section-lightmode-bg;
   }
 
   .main-container:nth-child(even) {
@@ -183,11 +200,6 @@ body.lightmode {
     background-color: $color-lightmode-bg-dark;
   }
 
-  /* width */
-  &::-webkit-scrollbar {
-    width: 0.4rem;
-  }
-
   /* Track */
   &::-webkit-scrollbar-track {
     background: $color-lightmode-bg-dark;
@@ -196,6 +208,5 @@ body.lightmode {
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: $scrollbar-lightmode-bg;
-    border-radius: 999px;
   }
 }

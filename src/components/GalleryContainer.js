@@ -2,11 +2,10 @@ import React from "react";
 import "../styles/components/gallerycontainer.scss";
 
 function GalleryContainer({ title, demoLink, galleryImages }) {
-  console.log(galleryImages);
   return (
     <div className="gallery">
       <div className="gallery__header">
-        <h3>{title}</h3>
+        {/* <h3>{title}</h3>
         {demoLink && (
           <a
             href={demoLink}
@@ -16,7 +15,7 @@ function GalleryContainer({ title, demoLink, galleryImages }) {
           >
             Live Demo
           </a>
-        )}
+        )} */}
       </div>
 
       <img src={galleryImages[0]?.src} alt={title} />

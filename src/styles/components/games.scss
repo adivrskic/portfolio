@@ -2,5 +2,10 @@
 
 .games-content {
   width: 100%;
-  max-width: $content-width;
+  max-width: $header-width;
+  position: relative;
+}
+
+#games .section-heading {
+  margin-bottom: 2.5em;
 }

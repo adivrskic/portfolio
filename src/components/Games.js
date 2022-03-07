@@ -1,17 +1,24 @@
 import React from "react";
-import Card from "./Card";
+import GalleryContainer from "./GalleryContainer";
+import { karastanrugsGallery } from "../data/karastanrugsGallery";
+import { mohawkfactoryoutletGallery } from "../data/mohawkfactoryoutletGallery";
 import "../styles/components/games.scss";
 
 function Games() {
   return (
-    <section id="games" className="main-container">
+    <section id="games" className="main-container full-width">
       <h2 className="section-heading">My Games</h2>
       <div className="games-content">
-        <div className="card-container">
-          <Card bg={null} gallery={null} alt="Lorem Ipsum" />
-          <Card bg={null} gallery={null} alt="Lorem Ipsum" />
-          <Card bg={null} gallery={null} alt="Lorem Ipsum" />
-        </div>
+        <GalleryContainer
+          galleryImages={karastanrugsGallery}
+          title={"Karastan Rugs"}
+          demoLink={"https://karastanrugs.com"}
+        />
+        <GalleryContainer
+          galleryImages={mohawkfactoryoutletGallery}
+          title={"Mohawk Factory Outlet"}
+          demoLink={"https://mohawkfactoryoutlet.com"}
+        />
       </div>
     </section>
   );
