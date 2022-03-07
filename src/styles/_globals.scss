@@ -8,3 +8,14 @@ $button-lightmode-bg: linear-gradient(
   rgba(23, 147, 255, 1) 0%,
   rgba(118, 46, 205, 1) 100%
 );
+
+$scrollbar-darkmode-bg: linear-gradient(
+  to bottom,
+  rgba(29, 222, 203, 1) 0%,
+  rgba(46, 186, 205, 1) 100%
+);
+$scrollbar-lightmode-bg: linear-gradient(
+  to bottom,
+  rgba(23, 147, 255, 1) 0%,
+  rgba(118, 46, 205, 1) 100%
+);

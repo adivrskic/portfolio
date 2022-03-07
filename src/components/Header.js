@@ -20,12 +20,13 @@ function Header() {
 
   // Doesn't work on Chrome??
   const scrollToAnchor = (anchor) => {
-    const section = document.getElementById(anchor);
+    const scrollDistance =
+      document.getElementById(anchor).getBoundingClientRect().top +
+      window.scrollY;
 
-    section?.scrollIntoView({
+    window.scroll({
+      top: scrollDistance,
       behavior: "smooth",
-      block: "nearest",
-      inline: "end",
     });
   };
 

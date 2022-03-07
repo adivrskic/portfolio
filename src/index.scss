@@ -31,7 +31,7 @@ body {
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $color-darkmode-highlight;
+    background: $scrollbar-darkmode-bg;
     border-radius: 999px;
   }
 }
@@ -195,7 +195,7 @@ body.lightmode {
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $color-lightmode-highlight;
+    background: $scrollbar-lightmode-bg;
     border-radius: 999px;
   }
 }
