@@ -1,6 +1,7 @@
 @import "../colors";
 @import "../sizes";
 @import "../margins";
+@import "../globals";
 
 .header {
   position: sticky;
@@ -62,6 +63,8 @@
 
     li.active a {
       border-bottom: 3px solid $color-darkmode-highlight;
+      border-image-slice: 1;
+      border-image-source: $button-darkmode-bg;
     }
   }
 
@@ -99,6 +102,8 @@ body.lightmode {
 
       li.active a {
         border-bottom: 3px solid $color-lightmode-highlight;
+        border-image-slice: 1;
+        border-image-source: $button-lightmode-bg;
       }
     }
 

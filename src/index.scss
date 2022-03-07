@@ -62,7 +62,7 @@ ol {
 }
 
 .button {
-  padding: 0.75rem 1.75rem;
+  padding: 0.667rem 1.5rem;
   border-radius: 2.5rem;
   color: $color-darkmode-text-dark;
   background: $button-darkmode-bg;
@@ -70,17 +70,11 @@ ol {
   cursor: pointer;
   border: none;
   font-size: 1rem;
-  box-shadow: 0 2px 11px $color-darkmode-highlight;
+  box-shadow: 0 1px 6px $color-darkmode-highlight;
   transition: all 0.2s ease-in-out;
 
-  .icon {
-    height: 24px;
-    width: 24px;
-    margin-right: 1rem;
-  }
-
   &:hover {
-    box-shadow: 0 2px 15px $color-darkmode-highlight;
+    box-shadow: 0 1px 10px $color-darkmode-highlight;
   }
 
   &--inverse {
@@ -93,7 +87,7 @@ ol {
     &:hover {
       color: $color-darkmode-text-dark;
       background: $button-darkmode-bg;
-      box-shadow: 0 2px 14px $color-darkmode-highlight;
+      box-shadow: 0 1px 10px $color-darkmode-highlight;
     }
   }
 }
@@ -145,11 +139,11 @@ body.lightmode {
   .button {
     color: $color-lightmode-text-light;
     background: $button-lightmode-bg;
-    box-shadow: 0 2px 11px $color-lightmode-highlight;
+    box-shadow: 0 1px 6px $color-lightmode-highlight;
 
     &:hover {
       background-color: lighten($color-lightmode-highlight, 12%);
-      box-shadow: 0 2px 14px $color-lightmode-highlight;
+      box-shadow: 0 1px 10px $color-lightmode-highlight;
     }
 
     &--inverse {
@@ -162,7 +156,7 @@ body.lightmode {
       &:hover {
         color: $color-lightmode-text-light;
         background-color: $color-lightmode-highlight;
-        box-shadow: 0 2px 14px $color-lightmode-highlight;
+        box-shadow: 0 1px 10px $color-lightmode-highlight;
       }
     }
   }
