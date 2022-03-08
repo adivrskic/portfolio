@@ -3,8 +3,6 @@ import Header from "./components/Header";
 import MobileHeader from "./components/MobileHeader";
 import Banner from "./components/Banner";
 import Profile from "./components/Profile";
-import Work from "./components/Work";
-import Games from "./components/Games";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { StateProvider } from "./context/StateProvider";
