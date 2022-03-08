@@ -1,6 +1,12 @@
 @import "styles/colors";
 @import "styles/margins";
 @import "styles/globals";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,100&display=swap");
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+    url(../public/fonts/Poppins/Poppins-Regular.ttf) format("ttf");
+}
 
 *,
 *::before,
@@ -55,11 +61,16 @@ a {
   color: $color-darkmode-text-light;
 }
 
+p {
+  font-weight: 300;
+}
+
 ul,
 ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-weight: 300;
 }
 
 .button {
@@ -71,11 +82,11 @@ ol {
   cursor: pointer;
   border: none;
   font-size: 1rem;
-  // box-shadow: 0 1px 6px $color-darkmode-highlight;
   transition: all 0.2s ease-in-out;
+  // box-shadow: 0 1px 6px $color-darkmode-highlight;
 
   // &:hover {
-  //   //box-shadow: 0 1px 10px $color-darkmode-highlight;
+  //   transform: translateY(-5px);
   // }
 
   &--inverse {
@@ -158,10 +169,10 @@ body.lightmode {
     background: $button-lightmode-bg;
     //box-shadow: 0 1px 6px $color-lightmode-highlight;
 
-    &:hover {
-      //background-color: lighten($color-lightmode-highlight, 12%);
-      //box-shadow: 0 1px 10px $color-lightmode-highlight;
-    }
+    // &:hover {
+    //   //background-color: lighten($color-lightmode-highlight, 12%);
+    //   // box-shadow: 0 1px 10px $color-lightmode-highlight;
+    // }
 
     &--inverse {
       border: 1px solid $color-lightmode-highlight;

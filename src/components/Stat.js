@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Tooltip from "./Tooltip";
 import * as Icons from "react-icons/di";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
+import { StateContext } from "../context/StateProvider";
+
 import "../styles/components/stat.scss";
 
-function Stat({ icon, hearts, tooltipHeader, tooltipText }) {
-  const [open, setOpen] = useState(false);
-
+function Stat({ icon, hearts, tooltipHeader, tooltipText, tooltipId }) {
+  const [{ activeTooltip }, dispatch] = React.useContext(StateContext);
   const handleStatClick = () => {
-    setOpen(!open);
+    let payload = tooltipId;
+    if (activeTooltip === tooltipId) payload = null;
+    dispatch({ type: "SET_ACTIVE_TOOLTIP", payload });
   };
 
   const IoIcon = Icons?.[icon];
@@ -33,7 +36,7 @@ function Stat({ icon, hearts, tooltipHeader, tooltipText }) {
       <Tooltip
         heading={tooltipHeader}
         text={tooltipText}
-        open={open}
+        open={activeTooltip === tooltipId}
         onTooltipClick={() => handleStatClick()}
       />
     </div>

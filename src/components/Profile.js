@@ -67,6 +67,7 @@ function Profile() {
               hearts={hearts}
               tooltipHeader={tooltipHeader}
               tooltipText={tooltipText}
+              tooltipId={tooltipHeader}
             />
           ))}
         </div>

@@ -3,6 +3,8 @@
 @import "../sizes";
 
 .mobile-header {
+  display: flex;
+  align-items: center;
   position: sticky;
   top: 0;
   height: $header-height;
