@@ -32,8 +32,8 @@ function App() {
         <main className="main">
           <Banner />
           <Profile />
-          <Work />
-          <Games />
+          {/* <Work />
+          <Games /> */}
           <Contact />
         </main>
 

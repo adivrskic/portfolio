@@ -5,7 +5,7 @@ function Banner() {
   return (
     <div id="banner" className="banner">
       <div className="banner__content">
-        <h2>eCommerce Development Specialist</h2>
+        <h2>eCommerce + React Development</h2>
         <p>
           I'm a software engineer with a passion for front-end development, and
           with experience designing and developing eCommerce websites with

@@ -39,19 +39,12 @@ function Profile() {
     <section id="profile" className="main-container">
       <h2 class="section-heading">Profile</h2>
       <div className="profile-content">
-        <div className="profile-content__info">
-          <img
-            className="profile-content__image"
-            src="images/selfie.webp"
-            alt="Headshot of Adi Vrskic"
-          />
-          <p>
-            Several years of front and back end development experience building
-            and enhancing both large and small scale eCommerce websites and
-            applications. Professional knowledge in multiple different web
-            development frameworks and libraries, especially React.
-          </p>
-        </div>
+        <p className="profile-content__info">
+          Several years of front and back end development experience building
+          and enhancing both large and small scale eCommerce websites and
+          applications. Professional knowledge in multiple different web
+          development frameworks and libraries, especially React.
+        </p>
 
         <div className="profile-content__filters">
           {statButtons.map(({ id, displayName }) => (
