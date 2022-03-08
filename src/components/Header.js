@@ -60,7 +60,11 @@ function Header() {
             className="header__mode"
             onClick={() => dispatch({ type: "TOGGLE_THEME" })}
           >
-            {isDarkTheme ? <IoMoonOutline /> : <IoSunnyOutline />}
+            {isDarkTheme ? (
+              <IoMoonOutline style={{ stroke: "url(#gradient)" }} />
+            ) : (
+              <IoSunnyOutline style={{ stroke: "url(#gradient)" }} />
+            )}
           </div>
         </div>
       </div>

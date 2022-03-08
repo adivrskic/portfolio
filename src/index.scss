@@ -159,7 +159,7 @@ body.lightmode {
     //box-shadow: 0 1px 6px $color-lightmode-highlight;
 
     &:hover {
-      background-color: lighten($color-lightmode-highlight, 12%);
+      //background-color: lighten($color-lightmode-highlight, 12%);
       //box-shadow: 0 1px 10px $color-lightmode-highlight;
     }
 
@@ -172,7 +172,7 @@ body.lightmode {
       &.active,
       &:hover {
         color: $color-lightmode-text-light;
-        background-color: $color-lightmode-highlight;
+        background: $button-lightmode-bg;
         //box-shadow: 0 1px 10px $color-lightmode-highlight;
       }
     }

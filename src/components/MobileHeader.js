@@ -47,9 +47,15 @@ function MobileHeader() {
       <h1>Adi Vrskic</h1>
       <div className="mobile-header__icon">
         {menuOpen ? (
-          <IoClose onClick={() => toggleMenu()} />
+          <IoClose
+            onClick={() => toggleMenu()}
+            style={{ stroke: "url(#gradient)", fill: "url(#gradient)" }}
+          />
         ) : (
-          <IoMenu onClick={() => toggleMenu()} />
+          <IoMenu
+            onClick={() => toggleMenu()}
+            style={{ stroke: "url(#gradient)" }}
+          />
         )}
       </div>
       <nav className={`mobile-header__nav ${menuOpen && "active"}`}>
@@ -66,7 +72,11 @@ function MobileHeader() {
           className="mobile-header__mode"
           onClick={() => dispatch({ type: "TOGGLE_THEME" })}
         >
-          {isDarkTheme ? <IoMoonOutline /> : <IoSunnyOutline />}
+          {isDarkTheme ? (
+            <IoMoonOutline style={{ stroke: "url(#gradient)" }} />
+          ) : (
+            <IoSunnyOutline style={{ stroke: "url(#gradient)" }} />
+          )}
         </div>
       </nav>
     </div>
