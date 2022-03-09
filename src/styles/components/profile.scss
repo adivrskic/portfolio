@@ -21,13 +21,25 @@
     text-align: center;
   }
 
+  &__resume {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: $margin-md 0;
+
+    a {
+      font-weight: 600;
+    }
+  }
+
   &__filters {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     width: 100%;
-    margin-top: $margin-md;
   }
 
   &__stats {

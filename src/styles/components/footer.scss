@@ -51,6 +51,12 @@
   }
 }
 
+.resume {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
 body.lightmode {
   .footer {
     background: $color-lightmode-bg-light;

@@ -13,11 +13,13 @@ function Work() {
           galleryImages={karastanrugsGallery}
           title={"Karastan Rugs"}
           demoLink={"https://karastanrugs.com"}
+          tags={["Shopify", "Javascript", "jQuery"]}
         />
         <GalleryContainer
           galleryImages={mohawkfactoryoutletGallery}
           title={"Mohawk Factory Outlet"}
           demoLink={"https://mohawkfactoryoutlet.com"}
+          tags={["Shopify", "Javascript", "jQuery"]}
         />
       </div>
     </section>

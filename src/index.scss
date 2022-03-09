@@ -61,7 +61,9 @@ a {
   color: $color-darkmode-text-light;
 }
 
-p {
+p,
+a,
+span {
   font-weight: 300;
 }
 

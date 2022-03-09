@@ -1,12 +1,13 @@
 @import "../sizes";
 @import "../globals";
+@import "../margins";
 
 .work-content {
   width: 100%;
-  max-width: $header-width;
+  max-width: $content-width;
   position: relative;
 }
 
 #work .section-heading {
-  margin-bottom: 2.5em;
+  margin-bottom: $margin-md;
 }

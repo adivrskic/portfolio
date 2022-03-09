@@ -51,6 +51,14 @@ function Footer() {
             <IoMail />
           </a>
         </div>
+        <div className="resume">
+          <a href="/images/AdiVrskicResume.pdf" download>
+            Resume PDF
+          </a>
+          <a href="/images/AdiVrskicResume.doc" download>
+            Resume Doc
+          </a>
+        </div>
         <p>
           Created with <IoLogoReact />
         </p>

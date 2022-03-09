@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import MobileHeader from "./components/MobileHeader";
 import Banner from "./components/Banner";
 import Profile from "./components/Profile";
+import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { StateProvider } from "./context/StateProvider";
@@ -30,8 +31,8 @@ function App() {
         <main className="main">
           <Banner />
           <Profile />
-          {/* <Work />
-          <Games /> */}
+          <Work />
+          {/* <Games /> */}
           <Contact />
         </main>
 

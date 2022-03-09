@@ -46,6 +46,15 @@ function Profile() {
           development frameworks and libraries, especially React.
         </p>
 
+        <div className="profile-content__resume">
+          <a href="/images/AdiVrskicResume.pdf" download>
+            Download Resume PDF
+          </a>
+          <a href="/images/AdiVrskicResume.doc" download>
+            Download Resume Doc
+          </a>
+        </div>
+
         <div className="profile-content__filters">
           {statButtons.map(({ id, displayName }) => (
             <button
