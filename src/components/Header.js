@@ -47,7 +47,7 @@ function Header() {
                   <li>
                     <a
                       href={item.link}
-                      onClick={() => scrollToAnchor(item.link)}
+                      onClick={() => scrollToAnchor(item.key)}
                     >
                       {item.name}
                     </a>

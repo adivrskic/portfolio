@@ -62,7 +62,7 @@ function MobileHeader() {
         <ul>
           {nav.map((item) => (
             <li key={item.key}>
-              <a href={item.link} onClick={() => scrollToAnchor(item.link)}>
+              <a href={item.link} onClick={() => scrollToAnchor(item.key)}>
                 {item.name}
               </a>
             </li>
