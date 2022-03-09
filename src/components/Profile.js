@@ -40,9 +40,9 @@ function Profile() {
       <h2 class="section-heading">Profile</h2>
       <div className="profile-content">
         <p className="profile-content__info">
-          Several years of front and back end development experience building
-          and enhancing both large and small scale eCommerce websites and
-          applications. Professional knowledge in multiple different web
+          I have several years of front and back end development experience
+          building and enhancing both large and small scale eCommerce websites
+          and applications. Professional knowledge in multiple different web
           development frameworks and libraries, especially React.
         </p>
 
