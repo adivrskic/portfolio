@@ -28,7 +28,24 @@ function Stat({ icon, hearts, tooltipHeader, tooltipText, tooltipId }) {
     dispatch({ type: "SET_ACTIVE_TOOLTIP", payload });
   };
 
-  const Icon = icon;
+  const icons = {
+    DiHtml5: DiHtml5,
+    DiCss3: DiCss3,
+    DiSass: DiSass,
+    DiJsBadge: DiJsBadge,
+    DiJqueryLogo: DiJqueryLogo,
+    DiReact: DiReact,
+    DiAngularSimple: DiAngularSimple,
+    DiPython: DiPython,
+    DiNodejsSmall: DiNodejsSmall,
+    DiDatabase: DiDatabase,
+    DiCode: DiCode,
+    DiGoogleAnalytics: DiGoogleAnalytics,
+    DiHeroku: DiHeroku,
+  };
+
+  const Icon = icons[icon];
+  console.log(Icon);
 
   return (
     <div className="stat" onClick={() => handleStatClick()}>
