@@ -1,32 +1,29 @@
 @import "../colors";
 @import "../margins";
 @import "../sizes";
+@import "../mixins";
 
 .mobile-header {
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
+  @include flex($ali: center);
+  @include pos(sticky, $top: 0);
   height: $header-height;
   width: 100%;
   color: $text-light;
   background: $color-darkmode-bg-light;
   padding: 0 $margin-sm;
   z-index: 999;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  transition: background-color 0.2s ease-in-out;
+  box-shadow: $header-box-shadow;
+  transition: $transition-fast;
 
   &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex($jus: center, $ali: center);
     font-size: 2.7em;
     border-radius: 50%;
     background: $button-darkmode-bg;
     width: 40px;
     height: 40px;
     color: $text-light;
-    transition: all 0.2s ease-in-out;
+    transition: $transition-fast;
 
     div {
       padding-bottom: 7px;
@@ -35,9 +32,7 @@
   }
 
   &__icon {
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include pos(absolute, $top: 0, $right: 0);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -45,34 +40,26 @@
     padding-right: $margin-sm;
 
     svg {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: $icon-md;
+      height: $icon-md;
       color: $text-light;
     }
   }
 
   &__nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    @include flex(column, center, center);
+    @include pos(absolute, $top: 100%, $left: 0);
     width: 100%;
     height: calc(100vh - #{$header-height});
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     pointer-events: none;
     background: $color-darkmode-bg-light;
     opacity: 0;
-    transition: all 0.2s ease-in-out;
+    transition: $transition-fast;
 
     ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flex(column, center, center);
       width: 100%;
-      margin-bottom: 2.5rem;
+      margin-bottom: $margin-md;
     }
 
     li a {
@@ -81,13 +68,13 @@
       padding: $margin-sm;
       font-size: 2rem;
       opacity: 0;
-      transition: all 0.2s ease-in-out;
+      transition: $transition-fast;
     }
 
     .mobile-header__mode {
       svg {
-        height: 2rem;
-        width: 2rem;
+        height: $icon-md;
+        width: $icon-md;
         color: $color-darkmode-highlight;
       }
     }

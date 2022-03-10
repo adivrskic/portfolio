@@ -1,32 +1,33 @@
 @import "../colors";
+@import "../margins";
+@import "../mixins";
+@import "../sizes";
 
 .stat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex($jus: center, $ali: center);
   flex-basis: 33.3333%;
-  padding: 1rem 0;
+  padding: $padding-sm 0;
   cursor: pointer;
   position: relative;
-  transition: all 0.2s ease-in-out;
-  border-radius: 6px;
+  transition: $transition-fast;
+  border-radius: $border-radius;
 
   &-icon {
-    width: 3.25rem;
-    height: 3.25rem;
+    width: $icon-lg;
+    height: $icon-lg;
   }
 
   &-heart-container {
-    margin-left: 0.5rem;
+    margin-left: $margin-sm;
   }
 
   &-heart {
-    width: 2rem;
-    height: 2rem;
+    width: $icon-sm;
+    height: $icon-sm;
   }
 
   &:hover {
-    background-color: darken(#282c33, 5%);
+    background-color: $color-darkmode-bg-dark;
   }
 
   @media (hover: none) {

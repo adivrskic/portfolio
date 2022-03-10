@@ -1,14 +1,15 @@
 @import "../colors";
 @import "../margins";
 @import "../sizes";
+@import "../mixins";
 
 .gallery {
   display: flex;
   width: 100%;
-  height: 350px;
+  height: $gallery-height;
   position: relative;
   margin-bottom: $margin-md;
-  gap: 1rem;
+  gap: $flex-gap;
 
   &:last-child {
     margin-bottom: 0;
@@ -19,33 +20,24 @@
   }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+    @include flex($jus: center, $ali: center);
+    padding: $padding-sm 0;
   }
 
   &__image {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 70%;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 9px;
-      z-index: 3;
+      border-radius: 14px;
     }
   }
 
   &__description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center);
     height: 100%;
     width: 50%;
 
@@ -82,7 +74,4 @@
       }
     }
   }
-}
-
-.gallery__image {
 }

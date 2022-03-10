@@ -1,14 +1,13 @@
 @import "../sizes";
+@import "../mixins";
+@import "../margins";
 
 .contact-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column, center, center);
   text-align: center;
   max-width: $content-width;
 
   p {
-    margin: 2.5rem auto;
+    margin: $margin-md auto;
   }
 }

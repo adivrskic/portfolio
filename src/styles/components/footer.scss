@@ -1,18 +1,16 @@
 @import "../colors";
 @import "../margins";
+@import "../sizes";
+@import "../mixins";
 
 .footer {
-  display: flex;
-  justify-content: center;
+  @include flex($jus: center);
   padding: $margin-sm;
   background: $color-darkmode-bg-light;
   width: 100%;
 
   .footer-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center);
   }
 
   .social-links {
@@ -20,13 +18,13 @@
     margin: $margin-sm 0;
 
     .social-link {
-      transition: all 0.2s ease-in-out;
+      transition: $transition-fast;
     }
 
     .social-link,
     .social-link svg {
-      width: 2rem;
-      height: 2rem;
+      width: $icon-sm;
+      height: $icon-sm;
     }
 
     .social-link:hover {
@@ -39,14 +37,13 @@
   }
 
   p {
-    display: flex;
-    align-items: center;
+    @include flex($ali: center);
     color: $text-light;
 
     svg {
-      margin-left: 5px;
-      width: 1.5rem;
-      height: 1.5rem;
+      margin-left: $margin-sm;
+      width: $icon-sm;
+      height: $icon-sm;
     }
   }
 }
@@ -54,7 +51,7 @@
 .resume {
   display: flex;
   gap: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: $margin-sm;
 }
 
 body.lightmode {

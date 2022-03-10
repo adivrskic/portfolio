@@ -13,6 +13,10 @@ $color-darkmode-bg-dark: #1d2025;
 $color-darkmode-placeholder: #515a61;
 $color-darkmode-highlight: #1ddecb;
 
+//Shadows
+$header-box-shadow: 0 0 6px rgba(0, 0, 0, 0.19);
+
+// Gradients
 $gradient-darkmode: linear-gradient(
   135deg,
   rgba(29, 222, 203, 1) 0%,
@@ -45,3 +49,7 @@ $scrollbar-lightmode-bg: $gradient-ttb-lightmode;
 
 $section-darkmode-bg: $gradient-ttb-darkmode;
 $section-lightmode-bg: $gradient-ttb-lightmode;
+
+$transition-fast: all 0.2s ease-in-out;
+$transition: all 0.4s ease-in-out;
+$transition-slow: all 0.6s ease-in-out;

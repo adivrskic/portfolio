@@ -1,10 +1,10 @@
 @import "../colors";
 @import "../margins";
 @import "../sizes";
+@import "../mixins";
 
 .profile-content {
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   margin-top: $margin-md;
   max-width: $content-width;
   width: 100%;
@@ -14,11 +14,9 @@
   }
 
   &__resume {
+    @include flex($jus: center, $ali: center);
     width: 100%;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+    gap: $flex-gap;
     margin: $margin-md 0;
 
     a {
@@ -28,22 +26,18 @@
   }
 
   &__filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    @include flex($jus: center, $ali: center);
+    gap: $flex-gap;
     width: 100%;
   }
 
   &__stats {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex($wrap: wrap);
     margin-top: $margin-md;
   }
 
   &__logos {
-    display: flex;
-    justify-content: center;
+    @include flex($jus: center);
     margin-top: $margin-md;
 
     img {
@@ -59,7 +53,6 @@
   @media screen and (max-width: 800px) {
     &__info {
       margin-left: 0;
-
       flex-direction: column;
 
       p {

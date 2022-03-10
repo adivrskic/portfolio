@@ -1,29 +1,26 @@
 @import "../colors";
 @import "../sizes";
 @import "../margins";
+@import "../mixins";
 
 .header {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
+  @include pos(sticky, $top: 0);
+  @include flex($jus: center);
   background: $color-darkmode-bg-light;
   width: 100%;
   z-index: 999;
   height: $header-height;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
+  box-shadow: $header-box-shadow;
 
   &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex($jus: center, $ali: center);
     font-size: 2.7em;
     border-radius: 50%;
     background: $button-darkmode-bg;
     width: 40px;
     height: 40px;
     color: $text-light;
-    transition: all 0.2s ease-in-out;
+    transition: $transition-fast;
 
     div {
       padding-bottom: 7px;
@@ -32,9 +29,7 @@
   }
 
   &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex($jus: space-between, $ali: center);
     width: $header-width;
     color: $text-light;
     padding-left: $margin-sm;
@@ -43,10 +38,6 @@
   &__nav-container {
     display: flex;
     height: 100%;
-  }
-
-  h2 {
-    font-weight: 600;
   }
 
   nav {
@@ -59,19 +50,17 @@
     height: 100%;
 
     li {
-      display: flex;
-      align-items: center;
+      @include flex($ali: center);
       height: 100%;
     }
 
     li a {
-      display: flex;
-      align-items: center;
+      @include flex($ali: center);
       height: 100%;
       text-decoration: none;
       padding: 0 $margin-sm;
       border-bottom: 3px solid transparent;
-      transition: all 0.2s ease-in-out;
+      transition: $transition-fast;
     }
 
     li a:hover {
@@ -86,15 +75,13 @@
   }
 
   &__mode {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
+    @include flex($jus: center, $ali: center);
+    padding: 0 $padding-sm;
     cursor: pointer;
 
     svg {
-      height: 1.5rem;
-      width: 1.5rem;
+      height: $icon-sm;
+      width: $icon-sm;
       color: $color-darkmode-highlight;
     }
   }
