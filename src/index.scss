@@ -98,7 +98,6 @@ ol {
     color: $color-darkmode-highlight;
     background: none;
     // box-shadow: none;
-    border: 1px solid $color-darkmode-highlight;
 
     &.active,
     &:hover {
@@ -178,7 +177,6 @@ body.lightmode {
     // }
 
     &--inverse {
-      border: 1px solid $color-lightmode-highlight;
       color: $color-lightmode-highlight;
       background: none;
       //box-shadow: none;

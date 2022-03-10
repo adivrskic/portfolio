@@ -40,7 +40,7 @@ function GalleryContainer({
             target="_blank"
             className="button"
           >
-            Live Demo
+            Live Site
           </a>
         )}
       </div>

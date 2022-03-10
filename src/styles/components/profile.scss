@@ -5,7 +5,7 @@
 
 .profile-content {
   @include flex(column);
-  margin-top: $margin-md;
+  margin-top: $margin-lg;
   max-width: $content-width;
   width: 100%;
 
@@ -17,7 +17,7 @@
     @include flex($jus: center, $ali: center);
     width: 100%;
     gap: $flex-gap;
-    margin: $margin-md 0;
+    margin: $margin-lg 0;
 
     a {
       text-align: center;
@@ -33,12 +33,12 @@
 
   &__stats {
     @include flex($wrap: wrap);
-    margin-top: $margin-md;
+    margin-top: $margin-sm;
   }
 
   &__logos {
     @include flex($jus: center);
-    margin-top: $margin-md;
+    margin-top: $margin-lg;
 
     img {
       width: 200px;
