@@ -14,6 +14,23 @@
   height: $header-height;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
 
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7em;
+    border-radius: 50%;
+    background: $button-darkmode-bg;
+    width: 40px;
+    height: 40px;
+    color: $color-darkmode-text-light;
+    transition: all 0.2s ease-in-out;
+
+    div {
+      padding-bottom: 7px;
+    }
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -87,6 +104,10 @@ body.lightmode {
   .header {
     background: $color-lightmode-bg-light;
 
+    &__logo {
+      background: $button-lightmode-bg;
+    }
+
     &__content {
       color: $color-lightmode-text-dark;
     }
@@ -102,7 +123,6 @@ body.lightmode {
 
       li.active a {
         border-bottom: 3px solid $color-lightmode-highlight;
-        border-image-slice: 1;
         border-image-source: $button-lightmode-bg;
       }
     }

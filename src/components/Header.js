@@ -34,7 +34,10 @@ function Header() {
   return (
     <header className="header">
       <div className="header__content">
-        <h2>Adi Vrskic</h2>
+        <div className="header__logo">
+          <div>a</div>
+        </div>
+        {/* <h2>Adi Vrskic</h2> */}
         <div className="header__nav-container">
           <nav aria-label="Site navigation" role="navigation">
             <ul>

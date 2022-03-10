@@ -44,7 +44,9 @@ function MobileHeader() {
 
   return (
     <div className="mobile-header">
-      <h1>Adi Vrskic</h1>
+      <div className="mobile-header__logo">
+        <div>a</div>
+      </div>
       <div className="mobile-header__icon">
         {menuOpen ? (
           <IoClose

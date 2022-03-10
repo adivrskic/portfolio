@@ -15,7 +15,7 @@ function Banner() {
         </linearGradient>
       </svg>
       <div className="banner__content">
-        <h2>eCommerce + React Development</h2>
+        <h1>Adi Vrskic</h1>
         <p>
           I'm a software engineer with a passion for front-end development, and
           with experience designing and developing eCommerce websites with
