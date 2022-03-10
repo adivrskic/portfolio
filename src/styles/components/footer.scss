@@ -30,7 +30,7 @@
     }
 
     .social-link:hover {
-      color: darken($color-darkmode-text-light, 7.5%);
+      color: darken($text-light, 7.5%);
     }
 
     .social-link:not(:last-child) {
@@ -41,7 +41,7 @@
   p {
     display: flex;
     align-items: center;
-    color: $color-darkmode-text-light;
+    color: $text-light;
 
     svg {
       margin-left: 5px;
@@ -63,12 +63,12 @@ body.lightmode {
 
     .social-links {
       .social-link:hover {
-        color: darken($color-lightmode-text-dark, 7.5%);
+        color: darken($text-dark, 7.5%);
       }
     }
 
     p {
-      color: $color-lightmode-text-dark;
+      color: $text-dark;
     }
   }
 }

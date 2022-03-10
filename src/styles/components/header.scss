@@ -1,7 +1,6 @@
 @import "../colors";
 @import "../sizes";
 @import "../margins";
-@import "../globals";
 
 .header {
   position: sticky;
@@ -23,7 +22,7 @@
     background: $button-darkmode-bg;
     width: 40px;
     height: 40px;
-    color: $color-darkmode-text-light;
+    color: $text-light;
     transition: all 0.2s ease-in-out;
 
     div {
@@ -36,7 +35,7 @@
     justify-content: space-between;
     align-items: center;
     width: $header-width;
-    color: $color-darkmode-text-light;
+    color: $text-light;
     padding-left: $margin-sm;
   }
 
@@ -109,12 +108,12 @@ body.lightmode {
     }
 
     &__content {
-      color: $color-lightmode-text-dark;
+      color: $text-dark;
     }
 
     ul {
       li a {
-        color: $color-lightmode-text-dark;
+        color: $text-dark;
       }
 
       li a:hover {

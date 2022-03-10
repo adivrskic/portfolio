@@ -14,7 +14,6 @@
   &-icon {
     width: 3.25rem;
     height: 3.25rem;
-    color: $color-highlight-light;
   }
 
   &-heart-container {
@@ -53,10 +52,6 @@
 
 body.lightmode {
   .stat {
-    &-icon {
-      color: $color-lightmode-highlight;
-    }
-
     &:hover {
       background-color: $color-lightmode-bg-dark;
     }

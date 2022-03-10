@@ -44,7 +44,7 @@ function Header() {
               <Scrollspy
                 items={nav.map((item) => item.key)}
                 currentClassName="active"
-                offset={-250}
+                offset={-200}
               >
                 {nav.map((item) => (
                   <li>

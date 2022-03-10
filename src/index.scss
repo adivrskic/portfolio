@@ -1,6 +1,5 @@
 @import "styles/colors";
 @import "styles/margins";
-@import "styles/globals";
 @import "styles/overrides";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,100&display=swap");
@@ -24,7 +23,7 @@ html {
 }
 
 body {
-  color: $color-darkmode-text-light;
+  color: $text-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -60,7 +59,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: $color-darkmode-text-light;
+  color: $text-light;
 }
 
 p,
@@ -80,7 +79,7 @@ ol {
 .button {
   padding: 0.667rem 1.5rem;
   border-radius: 2.5rem;
-  color: $color-darkmode-text-dark;
+  color: $text-dark;
   background: $button-darkmode-bg;
   font-weight: 600;
   cursor: pointer;
@@ -101,7 +100,7 @@ ol {
 
     &.active,
     &:hover {
-      color: $color-darkmode-text-dark;
+      color: $text-dark;
       background: $button-darkmode-bg;
       //box-shadow: 0 1px 10px $color-darkmode-highlight;
     }
@@ -109,7 +108,7 @@ ol {
 }
 
 .section-heading {
-  color: $color-darkmode-text-light;
+  color: $text-light;
   font-weight: 600;
   font-size: 2.5rem;
 }
@@ -135,13 +134,17 @@ ol {
 
   &.theme-bg {
     background: $section-darkmode-bg;
-    color: $color-darkmode-text-light;
+    color: $text-light;
 
     .button {
-      border: 1px solid $color-darkmode-text-light;
-      color: $color-darkmode-text-light;
+      border: 1px solid $text-light;
+      color: $text-light;
       background: none;
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 6.0625em $margin-sm 6.0625em $margin-sm;
   }
 }
 
@@ -162,14 +165,14 @@ ol {
 }
 
 body.lightmode {
-  color: $color-lightmode-text-dark;
+  color: $text-dark;
 
   a {
-    color: $color-lightmode-text-dark;
+    color: $text-dark;
   }
 
   .button {
-    color: $color-lightmode-text-light;
+    color: $text-light;
     background: $button-lightmode-bg;
     //box-shadow: 0 1px 6px $color-lightmode-highlight;
 
@@ -186,7 +189,7 @@ body.lightmode {
 
       &.active,
       &:hover {
-        color: $color-lightmode-text-light;
+        color: $text-light;
         background: $button-lightmode-bg;
         //box-shadow: 0 1px 10px $color-lightmode-highlight;
       }
@@ -195,11 +198,11 @@ body.lightmode {
 
   .main-container:not(.theme-bg) {
     .section-heading {
-      color: $color-lightmode-text-dark;
+      color: $text-dark;
     }
 
     .main {
-      color: $color-lightmode-text-dark;
+      color: $text-dark;
     }
   }
 
