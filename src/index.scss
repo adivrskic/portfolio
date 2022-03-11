@@ -88,7 +88,7 @@ ol {
   border: none;
   font-size: 1rem;
   transition: $transition-fast;
-  // box-shadow: 0 1px 6px $color-darkmode-highlight;
+  box-shadow: 0 1px 36px rgba(29, 222, 203, 0.4);
 
   // &:hover {
   //   transform: translateY(-5px);
@@ -97,13 +97,13 @@ ol {
   &--inverse {
     color: $color-darkmode-highlight;
     background: none;
-    // box-shadow: none;
+    box-shadow: none;
 
     &.active,
     &:hover {
       color: $text-light;
       background: $button-darkmode-bg;
-      //box-shadow: 0 1px 10px $color-darkmode-highlight;
+      box-shadow: 0 1px 36px rgba(29, 222, 203, 0.4);
     }
   }
 }
@@ -169,7 +169,7 @@ body.lightmode {
   .button {
     color: $text-light;
     background: $button-lightmode-bg;
-    //box-shadow: 0 1px 6px $color-lightmode-highlight;
+    box-shadow: 0 1px 36px rgba(0, 116, 217, 0.4);
 
     // &:hover {
     //   //background-color: lighten($color-lightmode-highlight, 12%);
@@ -179,13 +179,13 @@ body.lightmode {
     &--inverse {
       color: $color-lightmode-highlight;
       background: none;
-      //box-shadow: none;
+      box-shadow: none;
 
       &.active,
       &:hover {
         color: $text-light;
         background: $button-lightmode-bg;
-        //box-shadow: 0 1px 10px $color-lightmode-highlight;
+        box-shadow: 0 1px 36px rgba(0, 116, 217, 0.4);
       }
     }
   }
