@@ -8,7 +8,7 @@ function Contact() {
       <div className="contact-content">
         <p>
           Don't be shy, email me if you have a cool website or game idea. <br />
-          Let's make something cool together!
+          Let's make something amazing together!
         </p>
         <a href="mailto:adivrskic123@gmail.com" className="button">
           Email Me
