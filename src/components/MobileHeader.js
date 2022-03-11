@@ -14,12 +14,6 @@ function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "initial";
-    }
-
     setMenuOpen(!menuOpen);
   };
 
@@ -34,6 +28,14 @@ function MobileHeader() {
 
     localStorage.setItem("IS_DARK_THEME", isDarkTheme);
   }, [isDarkTheme]);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "initial";
+    }
+  }, [menuOpen]);
 
   const scrollToAnchor = (anchor) => {
     const scrollDistance =
