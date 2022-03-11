@@ -15,6 +15,12 @@ function MobileHeader() {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "initial";
+    }
   };
 
   const [{ isDarkTheme }, dispatch] = React.useContext(StateContext);
