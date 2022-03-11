@@ -14,13 +14,13 @@ function MobileHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-
     if (menuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "initial";
     }
+
+    setMenuOpen(!menuOpen);
   };
 
   const [{ isDarkTheme }, dispatch] = React.useContext(StateContext);
