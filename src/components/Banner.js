@@ -17,9 +17,9 @@ function Banner() {
       </svg>
       <div className="banner__content">
         <h1 className="banner__content-heading">Adi Vrskic</h1>
-        <h2 className="banner__content-subheading">
+        {/* <h2 className="banner__content-subheading">
           React and eCommerce Developer
-        </h2>
+        </h2> */}
         <p>
           I'm a software engineer with a passion for front-end development, and
           with experience designing and developing eCommerce websites with
