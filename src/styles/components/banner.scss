@@ -19,17 +19,42 @@
     text-align: center;
     transform: translate(-50%, -50%);
     color: $text-light;
-    width: 100%;
-    max-width: calc(#{$content-width} + #{$padding-sm});
+    width: $text-width;
+    max-width: calc(100% - #{$padding-sm});
     padding: $padding-sm;
+
+    &-subheading {
+      font-weight: 300;
+      font-size: 1.25rem;
+      line-height: 0.3;
+    }
 
     p {
       margin: $margin-md 0;
     }
   }
 
+  &__buttons {
+    @include flex($jus: center);
+    gap: $flex-gap;
+
+    .button:first-child {
+      background: none;
+      border: 1px solid #fff;
+      box-shadow: none;
+    }
+
+    .button {
+      width: 201px;
+    }
+  }
+
   @media screen and (max-width: $mobile-breakpoint) {
     height: $banner-height-mobile;
+
+    &__buttons {
+      flex-direction: column;
+    }
   }
 }
 

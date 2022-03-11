@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollToAnchor } from "../helpers/helpers";
 import { StateContext } from "../context/StateProvider";
 
 import "../styles/components/banner.scss";
@@ -15,15 +16,24 @@ function Banner() {
         </linearGradient>
       </svg>
       <div className="banner__content">
-        <h1>Adi Vrskic</h1>
+        <h1 className="banner__content-heading">Adi Vrskic</h1>
+        <h2 className="banner__content-subheading">
+          React and eCommerce Developer
+        </h2>
         <p>
           I'm a software engineer with a passion for front-end development, and
           with experience designing and developing eCommerce websites with
           React, Shopify and Squarespace.
         </p>
-        <a className="button" href="mailto:adivrskic123@gmail.com">
-          Let's work together
-        </a>
+        {/* <Socials size="sm" /> */}
+        <div className="banner__buttons">
+          <button className="button" onClick={() => scrollToAnchor("profile")}>
+            Learn More
+          </button>
+          <a className="button" href="mailto:adivrskic123@gmail.com">
+            Let's work together
+          </a>
+        </div>
       </div>
     </div>
   );

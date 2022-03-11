@@ -2,8 +2,8 @@ $text-light: #f5f7fa;
 $text-dark: #282c33;
 
 // Light Mode
-$color-lightmode-bg-light: #e3e3e3;
-$color-lightmode-bg-dark: #d3d3d3;
+$color-lightmode-bg-light: #fcfcfc;
+$color-lightmode-bg-dark: #f1f1f1;
 $color-lightmode-placeholder: #bbbbbb;
 $color-lightmode-highlight: #0074d9;
 
@@ -15,6 +15,8 @@ $color-darkmode-highlight: #1ddecb;
 
 //Shadows
 $header-box-shadow: 0 0 6px rgba(0, 0, 0, 0.19);
+$button-box-shadow-light: 0 1px 36px rgba(23, 147, 255, 0.4);
+$button-box-shadow-dark: 0 1px 36px rgba(29, 222, 203, 0.4);
 
 // Gradients
 $gradient-darkmode: linear-gradient(

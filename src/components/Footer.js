@@ -52,10 +52,10 @@ function Footer() {
           </a>
         </div>
         <div className="resume">
-          <a href="/images/AdiVrskicResume.pdf" download>
+          <a href="/docs/AdiVrskicResume.pdf" download>
             Resume PDF
           </a>
-          <a href="/images/AdiVrskicResume.doc" download>
+          <a href="/docs/AdiVrskicResume.doc" download>
             Resume Doc
           </a>
         </div>

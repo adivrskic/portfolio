@@ -47,10 +47,10 @@ function Profile() {
         </p>
 
         <div className="profile-content__resume">
-          <a href="/images/AdiVrskicResume.pdf" download>
+          <a href="/docs/AdiVrskicResume.pdf" download>
             Download Resume PDF
           </a>
-          <a href="/images/AdiVrskicResume.doc" download>
+          <a href="/docs/AdiVrskicResume.doc" download>
             Download Resume Doc
           </a>
         </div>

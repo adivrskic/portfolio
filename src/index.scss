@@ -88,7 +88,7 @@ ol {
   border: none;
   font-size: 1rem;
   transition: $transition-fast;
-  box-shadow: 0 1px 36px rgba(29, 222, 203, 0.4);
+  box-shadow: $button-box-shadow-dark;
 
   // &:hover {
   //   transform: translateY(-5px);
@@ -103,7 +103,7 @@ ol {
     &:hover {
       color: $text-light;
       background: $button-darkmode-bg;
-      box-shadow: 0 1px 36px rgba(29, 222, 203, 0.4);
+      box-shadow: $button-box-shadow-dark;
     }
   }
 }
@@ -169,7 +169,7 @@ body.lightmode {
   .button {
     color: $text-light;
     background: $button-lightmode-bg;
-    box-shadow: 0 1px 36px rgba(0, 116, 217, 0.4);
+    box-shadow: $button-box-shadow-light;
 
     // &:hover {
     //   //background-color: lighten($color-lightmode-highlight, 12%);
@@ -185,7 +185,7 @@ body.lightmode {
       &:hover {
         color: $text-light;
         background: $button-lightmode-bg;
-        box-shadow: 0 1px 36px rgba(0, 116, 217, 0.4);
+        box-shadow: $button-box-shadow-light;
       }
     }
   }

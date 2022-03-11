@@ -43,22 +43,24 @@ function MobileHeader() {
   };
 
   return (
-    <div className="mobile-header">
-      <div className="mobile-header__logo">
-        <div>a</div>
-      </div>
-      <div className="mobile-header__icon">
-        {menuOpen ? (
-          <IoClose
-            onClick={() => toggleMenu()}
-            style={{ stroke: "url(#gradient)", fill: "url(#gradient)" }}
-          />
-        ) : (
-          <IoMenu
-            onClick={() => toggleMenu()}
-            style={{ stroke: "url(#gradient)" }}
-          />
-        )}
+    <>
+      <div className="mobile-header">
+        <div className="mobile-header__logo">
+          <div>a</div>
+        </div>
+        <div className="mobile-header__icon">
+          {menuOpen ? (
+            <IoClose
+              onClick={() => toggleMenu()}
+              style={{ stroke: "url(#gradient)", fill: "url(#gradient)" }}
+            />
+          ) : (
+            <IoMenu
+              onClick={() => toggleMenu()}
+              style={{ stroke: "url(#gradient)" }}
+            />
+          )}
+        </div>
       </div>
       <nav className={`mobile-header__nav ${menuOpen && "active"}`}>
         <ul>
@@ -81,7 +83,7 @@ function MobileHeader() {
           )}
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 

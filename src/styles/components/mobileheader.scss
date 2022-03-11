@@ -11,7 +11,7 @@
   color: $text-light;
   background: $color-darkmode-bg-light;
   padding: 0 $margin-sm;
-  z-index: 999;
+  z-index: 10;
   box-shadow: $header-box-shadow;
   transition: $transition-fast;
 
@@ -48,12 +48,13 @@
 
   &__nav {
     @include flex(column, center, center);
-    @include pos(absolute, $top: 100%, $left: 0);
+    @include pos(fixed, $top: 0, $left: 0);
     width: 100%;
-    height: calc(100vh - #{$header-height});
+    height: 100vh;
     pointer-events: none;
     background: $color-darkmode-bg-light;
     opacity: 0;
+    z-index: 9;
     transition: $transition-fast;
 
     ul {
