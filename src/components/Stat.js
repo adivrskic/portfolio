@@ -45,7 +45,6 @@ function Stat({ icon, hearts, tooltipHeader, tooltipText, tooltipId }) {
   };
 
   const Icon = icons[icon];
-  console.log(Icon);
 
   return (
     <div className="stat" onClick={() => handleStatClick()}>

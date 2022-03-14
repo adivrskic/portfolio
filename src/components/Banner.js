@@ -1,7 +1,7 @@
 import React from "react";
 import { scrollToAnchor } from "../helpers/helpers";
 import { StateContext } from "../context/StateProvider";
-
+import Socials from "./Socials";
 import "../styles/components/banner.scss";
 
 function Banner() {
@@ -17,15 +17,14 @@ function Banner() {
       </svg>
       <div className="banner__content">
         <h1 className="banner__content-heading">Adi Vrskic</h1>
-        {/* <h2 className="banner__content-subheading">
+        <p className="banner__content-subheading">
           React and eCommerce Developer
-        </h2> */}
-        <p>
-          I'm a software engineer with a passion for front-end development, and
-          with experience designing and developing eCommerce websites with
-          React, Shopify and Squarespace.
         </p>
-        {/* <Socials size="sm" /> */}
+        <p>
+          I'm a software engineer specializing in front-end design and
+          development with React, Shopify and Squarespace.
+        </p>
+
         <div className="banner__buttons">
           <button className="button" onClick={() => scrollToAnchor("profile")}>
             Learn More
@@ -34,6 +33,9 @@ function Banner() {
             Let's work together
           </a>
         </div>
+      </div>
+      <div className="banner__socials">
+        <Socials size="small" color="light" />
       </div>
     </div>
   );

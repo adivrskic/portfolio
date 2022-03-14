@@ -25,13 +25,20 @@
 
     &-subheading {
       font-weight: 300;
-      font-size: 1.25rem;
-      line-height: 0.3;
+      line-height: 1;
+      margin: 0;
     }
 
     p {
       margin: $margin-md 0;
     }
+  }
+
+  &__socials {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &__buttons {

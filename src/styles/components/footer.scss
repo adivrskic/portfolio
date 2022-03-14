@@ -13,29 +13,6 @@
     @include flex(column, center, center);
   }
 
-  .social-links {
-    display: flex;
-    margin: $margin-sm 0;
-
-    .social-link {
-      transition: $transition-fast;
-    }
-
-    .social-link,
-    .social-link svg {
-      width: $icon-sm;
-      height: $icon-sm;
-    }
-
-    .social-link:hover {
-      color: darken($text-light, 7.5%);
-    }
-
-    .social-link:not(:last-child) {
-      margin-right: $margin-sm;
-    }
-  }
-
   p {
     @include flex($ali: center);
     color: $text-light;
@@ -49,7 +26,7 @@
 }
 
 .resume {
-  display: flex;
+  @include flex(column);
   gap: $flex-gap;
   margin-bottom: $margin-sm;
 }
