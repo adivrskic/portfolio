@@ -21,9 +21,21 @@
     gap: $flex-gap;
     margin: $margin-lg 0;
 
-    a {
+    a.button.dark {
+      background: none;
+      background-image: none;
+      border: 1px solid $text-light;
+      box-shadow: none;
       text-align: center;
       font-weight: 600;
+    }
+
+    a.button.light {
+      background: none;
+      background-image: none;
+      box-shadow: none;
+      border: 1px solid $text-dark;
+      color: $text-dark;
     }
   }
 
