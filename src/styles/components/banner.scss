@@ -23,14 +23,14 @@
     max-width: calc(100% - #{$padding-sm});
     padding: $padding-sm;
 
+    p {
+      margin: $margin-md 0;
+    }
+
     &-subheading {
       font-weight: 300;
       line-height: 1;
-      margin: 0;
-    }
-
-    p {
-      margin: $margin-md 0;
+      margin: 0 !important;
     }
   }
 
