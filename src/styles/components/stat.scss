@@ -26,10 +26,6 @@
     height: $icon-sm;
   }
 
-  &:hover {
-    background-color: $color-darkmode-bg-dark;
-  }
-
   @media (hover: none) {
     &:hover {
       background-color: inherit;

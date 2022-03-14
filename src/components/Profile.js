@@ -54,31 +54,34 @@ function Profile() {
             Download Resume Doc
           </a>
         </div>
+        <div className="container">
+          <div className="profile-content__filters">
+            {statButtons.map(({ id, displayName }) => (
+              <button
+                id={id}
+                className={`button button--inverse ${
+                  active === id ? "active" : ""
+                }`}
+                onClick={(e) => filterStats(e, id)}
+              >
+                {displayName}
+              </button>
+            ))}
+          </div>
 
-        <div className="profile-content__filters">
-          {statButtons.map(({ id, displayName }) => (
-            <button
-              id={id}
-              className={`button button--inverse ${
-                active === id ? "active" : ""
-              }`}
-              onClick={(e) => filterStats(e, id)}
-            >
-              {displayName}
-            </button>
-          ))}
-        </div>
-
-        <div className="profile-content__stats">
-          {renderedStats.map(({ icon, hearts, tooltipHeader, tooltipText }) => (
-            <Stat
-              icon={icon}
-              hearts={hearts}
-              tooltipHeader={tooltipHeader}
-              tooltipText={tooltipText}
-              tooltipId={tooltipHeader}
-            />
-          ))}
+          <div className="profile-content__stats">
+            {renderedStats.map(
+              ({ icon, hearts, tooltipHeader, tooltipText }) => (
+                <Stat
+                  icon={icon}
+                  hearts={hearts}
+                  tooltipHeader={tooltipHeader}
+                  tooltipText={tooltipText}
+                  tooltipId={tooltipHeader}
+                />
+              )
+            )}
+          </div>
         </div>
 
         <div className="profile-content__logos">

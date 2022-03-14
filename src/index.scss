@@ -5,11 +5,6 @@
 @import "styles/overrides";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,100&display=swap");
-@font-face {
-  font-family: "Poppins";
-  src: local("Poppins"),
-    url(../public/fonts/Poppins/Poppins-Regular.ttf) format("ttf");
-}
 
 *,
 *::before,
@@ -78,11 +73,19 @@ ol {
   font-weight: 300;
 }
 
+.container {
+  padding: $padding-md;
+  background-color: $color-darkmode-bg-dark;
+  border-radius: $border-radius;
+  box-shadow: $image-box-shadow;
+}
+
 .button {
   padding: 0.667rem 1.5rem;
   border-radius: 2.5rem;
   color: $text-light;
-  background: $button-darkmode-bg;
+  background-image: $button-darkmode-bg;
+  background-size: 150%;
   font-weight: 600;
   cursor: pointer;
   border: none;
@@ -90,9 +93,9 @@ ol {
   transition: $transition-fast;
   box-shadow: $button-box-shadow-dark;
 
-  // &:hover {
-  //   transform: translateY(-5px);
-  // }
+  &:hover {
+    animation: button-hover 2s linear infinite alternate;
+  }
 
   &--inverse {
     color: $color-darkmode-highlight;
@@ -166,14 +169,17 @@ body.lightmode {
     color: $text-dark;
   }
 
+  .container {
+    background-color: $color-lightmode-bg-dark;
+  }
+
   .button {
     color: $text-light;
-    background: $button-lightmode-bg;
+    background-image: $button-lightmode-bg;
     box-shadow: $button-box-shadow-light;
 
     &:hover {
-      //background-color: lighten($color-lightmode-highlight, 12%);
-      // box-shadow: 0 1px 10px $color-lightmode-highlight;
+      animation: button-hover 2s linear infinite alternate;
     }
 
     &--inverse {
@@ -220,5 +226,15 @@ body.lightmode {
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: $scrollbar-lightmode-bg;
+  }
+}
+
+@keyframes button-hover {
+  50% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
   }
 }
