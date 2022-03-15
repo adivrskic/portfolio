@@ -28,6 +28,11 @@
       box-shadow: none;
       text-align: center;
       font-weight: 600;
+
+      &:hover {
+        background: #fff;
+        color: $text-dark;
+      }
     }
 
     a.button.light {
@@ -36,6 +41,11 @@
       box-shadow: none;
       border: 1px solid $text-dark;
       color: $text-dark;
+
+      &:hover {
+        background: $text-dark;
+        color: $text-light;
+      }
     }
   }
 
@@ -64,7 +74,7 @@
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: $mobile-breakpoint) {
     &__info {
       margin-left: 0;
       flex-direction: column;
@@ -84,6 +94,11 @@
 
     &__filters {
       flex-wrap: wrap;
+
+      .button {
+        width: calc(50% - 0.75rem);
+        flex-basis: calc(50% - 0.75rem) !important;
+      }
     }
   }
 

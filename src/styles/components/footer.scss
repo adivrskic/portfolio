@@ -26,7 +26,7 @@
 }
 
 .resume {
-  @include flex(column);
+  @include flex(row);
   gap: $flex-gap;
   margin-bottom: $margin-sm;
 }

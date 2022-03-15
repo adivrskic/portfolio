@@ -94,7 +94,7 @@ ol {
   box-shadow: $button-box-shadow-dark;
 
   &:hover {
-    animation: button-hover 2s linear infinite alternate;
+    background-size: 500%;
   }
 
   &--inverse {
@@ -138,6 +138,12 @@ ol {
       border: 1px solid $text-light;
       color: $text-light;
       background: none;
+      box-shadow: none;
+
+      &:hover {
+        background: #fff;
+        color: $text-dark;
+      }
     }
   }
 }

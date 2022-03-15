@@ -49,6 +49,10 @@
       background: none;
       border: 1px solid #fff;
       box-shadow: none;
+      &:hover {
+        background: #fff;
+        color: $text-dark;
+      }
     }
 
     .button {

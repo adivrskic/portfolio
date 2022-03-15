@@ -28,7 +28,7 @@ function Socials({ size, color, margin }) {
       >
         <IoLogoLinkedin />
       </a>
-      <a
+      {/* <a
         className="social-link"
         target="_blank"
         rel="noreferrer"
@@ -36,7 +36,7 @@ function Socials({ size, color, margin }) {
         aria-label="Steam"
       >
         <IoLogoSteam />
-      </a>
+      </a> */}
       <a
         className="social-link"
         target="_blank"
