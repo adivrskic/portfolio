@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Scrollspy from "react-scrollspy";
-import { nav } from "../data/nav";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 import { StateContext } from "../context/StateProvider";
 import "../styles/components/header.scss";
@@ -20,13 +18,9 @@ function Header() {
     localStorage.setItem("IS_DARK_THEME", isDarkTheme);
   }, [isDarkTheme]);
 
-  const scrollToAnchor = (anchor) => {
-    const scrollDistance =
-      document.getElementById(anchor).getBoundingClientRect().top +
-      window.scrollY;
-
+  const scrollTop = () => {
     window.scroll({
-      top: scrollDistance,
+      top: 0,
       behavior: "smooth",
     });
   };
@@ -34,31 +28,10 @@ function Header() {
   return (
     <header className="header">
       <div className="header__content">
-        <div className="header__logo">
+        <div className="header__logo" onClick={() => scrollTop()}>
           <div>a</div>
         </div>
-        {/* <h2>Adi Vrskic</h2> */}
         <div className="header__nav-container">
-          <nav aria-label="Site navigation" role="navigation">
-            <ul>
-              <Scrollspy
-                items={nav.map((item) => item.key)}
-                currentClassName="active"
-                offset={-200}
-              >
-                {nav.map((item) => (
-                  <li>
-                    <a
-                      href={item.link}
-                      onClick={() => scrollToAnchor(item.key)}
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </Scrollspy>
-            </ul>
-          </nav>
           <div
             className="header__mode"
             onClick={() => dispatch({ type: "TOGGLE_THEME" })}
