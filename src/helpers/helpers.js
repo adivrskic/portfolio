@@ -1,7 +1,8 @@
 export const scrollToAnchor = (anchor) => {
   const scrollDistance =
     document.getElementById(anchor).getBoundingClientRect().top +
-    window.scrollY;
+    window.scrollY -
+    40;
 
   window.scroll({
     top: scrollDistance,
