@@ -8,7 +8,7 @@
   width: 100%;
   height: $gallery-height;
   position: relative;
-  margin-bottom: $margin-lg;
+  margin-bottom: $margin-md;
   gap: $flex-gap;
 
   &:last-child {
@@ -21,7 +21,7 @@
 
   &__header {
     @include flex($jus: center, $ali: center);
-    padding: $padding-sm 0;
+    padding: $padding-md 0;
   }
 
   &__image {

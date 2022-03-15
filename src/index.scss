@@ -124,7 +124,7 @@ ol {
 .main-container {
   @include flex(column, center, center);
   width: 100%;
-  padding: 6.0625em $margin-sm 6.0625em $margin-sm;
+  padding: $margin-md $margin-sm $margin-md $margin-sm;
 
   &.full-width {
     padding: 6.025em 0;
@@ -162,8 +162,18 @@ ol {
   margin-top: $margin-md;
 }
 
+a:focus,
+button:focus {
+  outline-color: $color-darkmode-highlight;
+}
+
 body.lightmode {
   color: $text-dark;
+
+  a:focus,
+  button:focus {
+    outline-color: $color-lightmode-highlight;
+  }
 
   a {
     color: $text-dark;

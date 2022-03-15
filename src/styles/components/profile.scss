@@ -5,7 +5,7 @@
 
 .profile-content {
   @include flex(column);
-  margin-top: $margin-lg;
+  margin-top: $margin-md;
   max-width: $content-width;
   width: 100%;
 
@@ -19,7 +19,7 @@
     @include flex($jus: center, $ali: center);
     width: 100%;
     gap: $flex-gap;
-    margin: $margin-lg 0;
+    margin: $margin-md 0;
 
     a.button.dark {
       background: none;
@@ -47,12 +47,12 @@
 
   &__stats {
     @include flex($wrap: wrap);
-    margin-top: $margin-sm;
+    margin-top: $margin-md;
   }
 
   &__logos {
     @include flex($jus: center);
-    margin-top: $margin-lg;
+    margin-top: $margin-md;
 
     img {
       width: 200px;
