@@ -35,14 +35,15 @@ function Header() {
     }
   };
 
+  const resetPicture = () => {
+    setCount(0);
+    setImageVisible(false);
+  };
+
   return (
     <header className="header">
       <div className={`image ${imageVisible ? "image-visible" : ""}`}>
-        <img
-          src="images/us.jpg"
-          alt="us"
-          onClick={() => setImageVisible(false)}
-        />
+        <img src="images/us.jpg" alt="us" onClick={() => resetPicture()} />
       </div>
       <div className="header__content">
         <div className="header__logo" onClick={() => displayPicture(count)}>
