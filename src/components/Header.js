@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 import { StateContext } from "../context/StateProvider";
 import "../styles/components/header.scss";
 
 function Header() {
+  const [count, setCount] = useState(0);
+  const [imageVisible, setImageVisible] = useState(false);
   const [{ isDarkTheme }, dispatch] = React.useContext(StateContext);
 
   useEffect(() => {
@@ -25,10 +27,25 @@ function Header() {
     });
   };
 
+  const displayPicture = () => {
+    setCount(count + 1);
+    console.log(count);
+    if (count >= 5) {
+      setImageVisible(true);
+    }
+  };
+
   return (
     <header className="header">
+      <div className={`image ${imageVisible ? "image-visible" : ""}`}>
+        <img
+          src="images/us.jpg"
+          alt="us"
+          onClick={() => setImageVisible(false)}
+        />
+      </div>
       <div className="header__content">
-        <div className="header__logo" onClick={() => scrollTop()}>
+        <div className="header__logo" onClick={() => displayPicture(count)}>
           <div>a</div>
         </div>
         <div className="header__nav-container">
