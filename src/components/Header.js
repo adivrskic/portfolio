@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
+import GalleryContainer from "./GalleryContainer";
 import { StateContext } from "../context/StateProvider";
+import { pictures } from "../data/pictures";
 import "../styles/components/header.scss";
 
 function Header() {
@@ -29,7 +31,6 @@ function Header() {
 
   const displayPicture = () => {
     setCount(count + 1);
-    console.log(count);
     if (count >= 5) {
       setImageVisible(true);
     }
@@ -40,10 +41,20 @@ function Header() {
     setImageVisible(false);
   };
 
+  console.log(imageVisible, count);
+
   return (
     <header className="header">
       <div className={`image ${imageVisible ? "image-visible" : ""}`}>
-        <img src="images/us.jpg" alt="us" onClick={() => resetPicture()} />
+        {imageVisible && (
+          <GalleryContainer
+            galleryImages={pictures.gallery}
+            isOpen={true}
+            onClose={() => {
+              resetPicture();
+            }}
+          />
+        )}
       </div>
       <div className="header__content">
         <div className="header__logo" onClick={() => displayPicture(count)}>

@@ -131,8 +131,8 @@ body.lightmode {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
+  width: 20%;
+  height: 20%;
   transition: all 0.3s ease-in-out;
 
   img {
@@ -143,6 +143,8 @@ body.lightmode {
 }
 
 .image-visible {
+  width: 90%;
+  height: 90%;
   opacity: 1;
   pointer-events: all;
 }

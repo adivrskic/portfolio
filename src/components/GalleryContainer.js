@@ -9,41 +9,47 @@ function GalleryContainer({
   tags,
   demoLink,
   galleryImages,
+  isOpen,
+  onClose,
 }) {
   const [imageIndex, setImageIndex] = useState(0);
-  const [open, setOpen] = useState(false);
-  console.log(galleryImages[0].src);
+  const [open, setOpen] = useState(isOpen ? true : false);
+
   return (
     <div className="gallery">
-      <div className="gallery__image">
-        <img
-          src={galleryImages[0]?.src}
-          alt={title}
-          onClick={() => setOpen(true)}
-        />
-      </div>
-      <div className="gallery__description">
-        {title && <h3>{title}</h3>}
-        {description && <p>{description}</p>}
-        {tags && (
-          <div className="gallery__tags">
-            {tags?.map((tag) => (
-              <span className="gallery__tag">{tag}</span>
-            ))}
+      {!isOpen && (
+        <>
+          <div className="gallery__image">
+            <img
+              src={galleryImages[0]?.src}
+              alt={title}
+              onClick={() => setOpen(true)}
+            />
           </div>
-        )}
+          <div className="gallery__description">
+            {title && <h3>{title}</h3>}
+            {description && <p>{description}</p>}
+            {tags && (
+              <div className="gallery__tags">
+                {tags?.map((tag) => (
+                  <span className="gallery__tag">{tag}</span>
+                ))}
+              </div>
+            )}
 
-        {demoLink && (
-          <a
-            href={demoLink}
-            rel="noreferrer"
-            target="_blank"
-            className="button"
-          >
-            Live Site
-          </a>
-        )}
-      </div>
+            {demoLink && (
+              <a
+                href={demoLink}
+                rel="noreferrer"
+                target="_blank"
+                className="button"
+              >
+                Live Site
+              </a>
+            )}
+          </div>
+        </>
+      )}
 
       {open && (
         <Lightbox
@@ -54,7 +60,10 @@ function GalleryContainer({
               (imageIndex + imageIndex.length - 1) % imageIndex.length
             ]?.src
           }
-          onCloseRequest={() => setOpen(false)}
+          onCloseRequest={() => {
+            onClose && onClose();
+            setOpen(false);
+          }}
           onMovePrevRequest={() =>
             setImageIndex(
               (imageIndex + galleryImages.length - 1) % galleryImages.length
@@ -63,6 +72,7 @@ function GalleryContainer({
           onMoveNextRequest={() =>
             setImageIndex((imageIndex + 1) % galleryImages.length)
           }
+          imageTitle={galleryImages[imageIndex]?.imageTitle}
         />
       )}
     </div>
