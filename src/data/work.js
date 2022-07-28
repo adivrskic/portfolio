@@ -126,4 +126,24 @@ export const work = [
       },
     ],
   },
+  {
+    title: "Battle & Brew",
+    description: null,
+    tags: ["Squarespace", "Javascript"],
+    demoLink: "https://battleandbrew.com",
+    gallery: [
+      {
+        src: "images/bnb1.png",
+        thumbnail: "images/bnb1.png",
+        thumbnailWidth: 600,
+        thumbnailHeight: 350,
+      },
+      {
+        src: "images/bnb2.png",
+        thumbnail: "images/bnb2.png",
+        thumbnailWidth: 150,
+        thumbnailHeight: 350,
+      },
+    ],
+  },
 ];
