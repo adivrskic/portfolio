@@ -24,7 +24,8 @@ function Footer() {
           </a>
         </div>
         <p>
-          Created with <IoLogoReact />
+          Created with
+          <IoLogoReact />
         </p>
       </div>
     </footer>
