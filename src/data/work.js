@@ -133,14 +133,14 @@ export const work = [
     demoLink: "https://battleandbrew.com",
     gallery: [
       {
-        src: "images/bnb1.png",
-        thumbnail: "images/bnb1.png",
+        src: "images/bnb1.webp",
+        thumbnail: "images/bnb1.webp",
         thumbnailWidth: 600,
         thumbnailHeight: 350,
       },
       {
-        src: "images/bnb2.png",
-        thumbnail: "images/bnb2.png",
+        src: "images/bnb2.webp",
+        thumbnail: "images/bnb2.webp",
         thumbnailWidth: 150,
         thumbnailHeight: 350,
       },
