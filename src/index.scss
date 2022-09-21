@@ -23,6 +23,7 @@ body {
   color: $text-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 
   /* width */
   &::-webkit-scrollbar {
