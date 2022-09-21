@@ -4,13 +4,14 @@
 @import "../mixins";
 
 .header {
-  @include pos(sticky, $top: 0);
+  @include pos(fixed, $top: 0);
   @include flex($jus: center);
-  background: $color-darkmode-bg-light;
-  width: 100%;
+  background: transparent;
+  width: calc(100% - 60px);
   z-index: 999;
+  margin: 0 30px;
   height: $header-height;
-  box-shadow: $header-box-shadow;
+  border-bottom: 1px solid #fff;
 
   &__logo {
     @include flex($jus: center, $ali: center);
@@ -18,22 +19,16 @@
     font-weight: bold;
     color: $text-light;
     cursor: pointer;
-    background: $button-darkmode-bg;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: $button-darkmode-bg;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     transition: $transition-fast;
   }
 
   &__content {
     @include flex($jus: space-between, $ali: center);
-    width: $header-width;
+    width: 100%;
     color: $text-light;
-    padding-left: $margin-sm;
-  }
-
-  &__nav {
-    display: flex;
-    height: 100%;
   }
 
   ul {
@@ -41,7 +36,6 @@
     height: 100%;
 
     li {
-      @include flex($ali: center);
       height: 100%;
     }
 
@@ -49,8 +43,7 @@
       @include flex($ali: center);
       height: 100%;
       text-decoration: none;
-      padding: 0 $margin-xs;
-      border-bottom: 3px solid transparent;
+      padding: 0 $margin-sm;
       font-weight: 600;
       transition: $transition-fast;
     }
@@ -68,49 +61,28 @@
 
   &__mode {
     @include flex($jus: center, $ali: center);
-    padding: 0 $padding-sm;
+    padding: 0 0 0 $padding-sm;
     cursor: pointer;
 
     svg {
       height: $icon-xs;
       width: $icon-xs;
-      color: $color-darkmode-highlight;
+      color: #fff;
     }
   }
 }
 
 body.lightmode {
   .header {
-    background: $color-lightmode-bg-light;
-
     &__logo {
-      background: $button-lightmode-bg;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    &__content {
-      color: $text-dark;
+      // background: $button-lightmode-bg;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
     }
 
     ul {
-      li a {
-        color: $text-dark;
-      }
-
-      li a:hover {
-        background-color: $color-lightmode-bg-dark;
-      }
-
-      li.active a {
-        border-bottom: 3px solid $color-lightmode-highlight;
-        border-image-source: $button-lightmode-bg;
-      }
-    }
-
-    &__mode {
-      svg {
-        color: $color-lightmode-highlight;
+      a {
+        color: $text-light;
       }
     }
   }

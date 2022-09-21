@@ -1,4 +1,6 @@
 import React from "react";
+import { pictures } from "../data/pictures";
+import GalleryContainer from "./GalleryContainer";
 
 function ForMyLove() {
   return <div>ForMyLove</div>;

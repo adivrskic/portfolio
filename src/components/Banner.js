@@ -9,12 +9,6 @@ function Banner() {
 
   return (
     <div id="banner" className="banner">
-      <svg width="0" height="0">
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="50%">
-          <stop stopColor={isDarkTheme ? "#1ddecb" : "#1793ff"} offset="0%" />
-          <stop stopColor={isDarkTheme ? "#2ebacd" : "#762ecd"} offset="100%" />
-        </linearGradient>
-      </svg>
       <div className="banner__content">
         <h1 className="banner__content-heading">Adi Vrskic</h1>
         <p className="banner__content-subheading">
@@ -25,6 +19,10 @@ function Banner() {
           development with React, Shopify and Squarespace.
         </p>
 
+        <div className="banner__socials">
+          <Socials size="small" color="light" />
+        </div>
+
         <div className="banner__buttons">
           <button className="button" onClick={() => scrollToAnchor("profile")}>
             Learn More
@@ -33,9 +31,6 @@ function Banner() {
             Let's work together
           </a>
         </div>
-      </div>
-      <div className="banner__socials">
-        <Socials size="small" color="light" />
       </div>
     </div>
   );
