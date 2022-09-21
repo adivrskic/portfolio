@@ -20,12 +20,7 @@ function Contact() {
 export default Contact;
 
 {
-  /* <p className="profile-content__info">
-I have several years of front and back end development experience
-building and enhancing both large and small scale eCommerce websites
-and applications. Professional knowledge in multiple different web
-development frameworks and libraries, especially React.
-</p>
+  /* 
 
 <div className="profile-content__resume">
 <a

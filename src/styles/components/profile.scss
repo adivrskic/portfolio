@@ -4,20 +4,25 @@
 @import "../mixins";
 
 .profile-content {
-  @include flex(column);
-  margin-top: $margin-md;
-  max-width: $content-width;
+  @include flex(row, $ali: center);
+  margin-top: 60px;
+  padding: 30px;
   width: 100%;
   height: 100%;
+
+  & > div {
+    width: 50%;
+  }
 
   &__info {
     max-width: $text-width;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+    font-size: 22px;
   }
 
   &__resume {
-    @include flex($jus: center, $ali: center);
+    @include flex();
     width: 100%;
     gap: $flex-gap;
     margin: $margin-md 0;
@@ -57,8 +62,14 @@
   }
 
   &__stats {
-    @include flex($wrap: wrap);
-    margin-top: $margin-md;
+    @include flex($dir: column, $ali: flex-end);
+    overflow: scroll;
+    height: 100%;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 
   &__logos {

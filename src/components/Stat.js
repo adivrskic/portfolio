@@ -48,25 +48,8 @@ function Stat({ icon, hearts, tooltipHeader, tooltipText, tooltipId }) {
 
   return (
     <div className="stat" onClick={() => handleStatClick()}>
-      <Icon className="stat-icon" style={{ fill: "url(#gradient)" }} />
-      <div className="stat-heart-container">
-        {[...Array(5)].map((e, i) => (
-          <span key={i}>
-            {i < hearts ? (
-              <IoHeart className="stat-heart stat-heart--full" />
-            ) : (
-              <IoHeartOutline className="stat-heart" />
-            )}
-          </span>
-        ))}
-      </div>
-
-      <Tooltip
-        heading={tooltipHeader}
-        text={tooltipText}
-        open={activeTooltip === tooltipId}
-        onTooltipClick={() => handleStatClick()}
-      />
+      {tooltipHeader}
+      <Icon className="stat-icon" />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
-import Skills from "./components/Skills";
+import Profile from "./components/Profile";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import { StateProvider } from "./context/StateProvider";
@@ -18,7 +18,7 @@ function App() {
           <main className="main">
             <Routes>
               <Route path="/" exact element={<Banner />} />
-              <Route path="/skills" element={<Skills />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/work" element={<Work />} />
               {/* <Route path="/games"  element={< Games />} /> */}
               <Route path="/contact" element={<Contact />} />

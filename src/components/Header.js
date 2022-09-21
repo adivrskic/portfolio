@@ -32,8 +32,8 @@ function Header() {
         </Link>
         <nav className="header__nav">
           <ul>
-            <Link to="/skills">
-              <li>skills</li>
+            <Link to="/profile">
+              <li>profile</li>
             </Link>
             <Link to="/work">
               <li>work</li>
