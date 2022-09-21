@@ -45,7 +45,7 @@
       height: 100%;
       text-decoration: none;
       padding: 0 $margin-sm;
-      font-weight: 600;
+      // font-weight: 600;
       transition: $transition-fast;
     }
 
@@ -71,15 +71,24 @@
 
 body.lightmode {
   .header {
+    border-bottom: 1px solid $text-dark;
+    color: $text-dark;
     &__logo {
       // background: $button-lightmode-bg;
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
+      color: $text-dark;
     }
 
     ul {
       a {
-        color: $text-light;
+        color: $text-dark;
+      }
+    }
+
+    &__mode {
+      svg {
+        color: $text-dark;
       }
     }
   }

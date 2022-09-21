@@ -2,10 +2,29 @@
 @import "../margins";
 
 .work-content {
+  padding: 0 30px;
   width: 100%;
+  margin-top: 60px;
+  height: calc(100% - 60px);
   position: relative;
-}
 
-#work .section-heading {
-  margin-bottom: $margin-md;
+  &__description {
+    text-transform: lowercase;
+    padding: 0 0 2.5rem 0;
+    transition: all 0.25s ease-in-out;
+
+    h3 {
+      font-weight: 300;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    &:first-child {
+      padding-top: 2.5rem;
+    }
+
+    &:hover {
+      transform: translateX(20px);
+    }
+  }
 }

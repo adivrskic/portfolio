@@ -5,13 +5,16 @@
 
 .stat {
   @include flex($jus: center, $ali: center);
-  // flex-basis: 33.3333%;
-  padding: 1.5rem 0;
+  padding: 0 0 2.5rem 0;
   cursor: pointer;
   position: relative;
   border-radius: $border-radius;
   font-size: 24px;
   transition: all 0.25s ease-in-out;
+
+  &:first-child {
+    padding-top: 2.5rem;
+  }
 
   &:hover {
     transform: translateX(-20px);

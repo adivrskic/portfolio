@@ -8,12 +8,21 @@ function Work() {
     <section id="work" className="main-container">
       <div className="work-content">
         {work.map(({ title, description, tags, demoLink, gallery }, index) => (
-          <GalleryContainer
-            galleryImages={gallery}
-            title={title}
-            demoLink={demoLink}
-            tags={tags}
-          />
+          <div className="work-content__description">
+            {title && <h3>{title}</h3>}
+            {description && <p>{description}</p>}
+
+            {/* {demoLink && (
+              <a
+                href={demoLink}
+                rel="noreferrer"
+                target="_blank"
+                className="button"
+              >
+                Live Site
+              </a>
+            )} */}
+          </div>
         ))}
       </div>
     </section>

@@ -15,7 +15,6 @@ import {
   DiGoogleAnalytics,
   DiHeroku,
 } from "react-icons/di";
-import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { StateContext } from "../context/StateProvider";
 
 import "../styles/components/stat.scss";
