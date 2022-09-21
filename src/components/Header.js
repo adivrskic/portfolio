@@ -3,6 +3,7 @@ import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 import GalleryContainer from "./GalleryContainer";
 import { StateContext } from "../context/StateProvider";
 import { pictures } from "../data/pictures";
+import { Link } from "react-router-dom";
 import "../styles/components/header.scss";
 
 function Header() {
@@ -42,8 +43,6 @@ function Header() {
     setImageVisible(false);
   };
 
-  console.log(imageVisible, count);
-
   return (
     <header className="header">
       <div className={`image ${imageVisible ? "image-visible" : ""}`}>
@@ -63,6 +62,23 @@ function Header() {
           onClick={() => displayPicture(count)}
         ></div>
         <div className="header__nav-container">
+          <nav>
+            <ul>
+              <Link to="/">
+                <li>Home</li>
+              </Link>
+              <Link to="/profile">
+                <li>Profile</li>
+              </Link>
+              <Link to="/work">
+                <li>Work</li>
+              </Link>
+              {/* <Link to="/games"><li>Games</li></Link> */}
+              <Link to="/contact">
+                <li>Contact</li>
+              </Link>
+            </ul>
+          </nav>
           <div
             className="header__mode"
             onClick={() => dispatch({ type: "TOGGLE_THEME" })}

@@ -4,7 +4,6 @@ import Banner from "./components/Banner";
 import Profile from "./components/Profile";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import { StateProvider } from "./context/StateProvider";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router";
