@@ -6,23 +6,28 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { StateProvider } from "./context/StateProvider";
-
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router";
 function App() {
   return (
     <StateProvider>
-      <div className="app">
-        <Header />
+      <BrowserRouter>
+        <div className="app">
+          <Header />
 
-        <main className="main">
-          <Banner />
-          <Profile />
-          <Work />
-          {/* <Games /> */}
-          <Contact />
-        </main>
+          <main className="main">
+            <Routes>
+              <Route path="/" exact element={<Banner />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/work" element={<Work />} />
+              {/* <Route path="/games"  element={< Games />} /> */}
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
 
-        <Footer />
-      </div>
+          {/* <Footer /> */}
+        </div>
+      </BrowserRouter>
     </StateProvider>
   );
 }

@@ -29,6 +29,7 @@ function Header() {
     });
   };
 
+  // Cute stuff
   const displayPicture = () => {
     setCount(count + 1);
     if (count >= 5) {
@@ -57,9 +58,10 @@ function Header() {
         )}
       </div>
       <div className="header__content">
-        <div className="header__logo" onClick={() => displayPicture(count)}>
-          <div>a</div>
-        </div>
+        <div
+          className="header__logo"
+          onClick={() => displayPicture(count)}
+        ></div>
         <div className="header__nav-container">
           <div
             className="header__mode"
