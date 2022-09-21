@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import { StateProvider } from "./context/StateProvider";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router";
+
 function App() {
   return (
     <StateProvider>
