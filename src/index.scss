@@ -81,7 +81,7 @@ ol {
 }
 
 .button {
-  padding: 0.667rem 1.5rem;
+  padding: 0.75rem 1rem;
   // border-radius: 2.5rem;
   color: $text-light;
   background-image: $button-darkmode-bg;
@@ -92,6 +92,7 @@ ol {
   font-size: 1rem;
   transition: $transition-fast;
   box-shadow: $button-box-shadow-dark;
+  text-align: center;
 
   &:hover {
     background-size: 500%;

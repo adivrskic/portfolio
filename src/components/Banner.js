@@ -10,13 +10,13 @@ function Banner() {
   return (
     <div id="banner" className="banner">
       <div className="banner__content">
-        <h1 className="banner__content-heading">Adi Vrskic</h1>
+        <h1 className="banner__content-heading">adi vrskic</h1>
         <p className="banner__content-subheading">
-          React and eCommerce Developer
+          react and ecommerce developer
         </p>
-        <p>
-          I'm a software engineer specializing in front-end design and
-          development with React, Shopify and Squarespace.
+        <p className="banner__content-subheading">
+          i'm a software engineer specializing in front-end design and
+          development with react, shopify and squarespace.
         </p>
 
         <div className="banner__socials">
@@ -25,10 +25,10 @@ function Banner() {
 
         <div className="banner__buttons">
           <button className="button" onClick={() => scrollToAnchor("profile")}>
-            Learn More
+            learn more
           </button>
           <a className="button" href="mailto:adivrskic123@gmail.com">
-            Let's work together
+            let's work together
           </a>
         </div>
       </div>

@@ -24,30 +24,20 @@
     padding: $padding-sm;
 
     &-heading {
-      font-size: 72px;
-      line-height: 72px;
-    }
-
-    p {
-      margin: $margin-md 0;
-      font-size: 20px;
-      max-width: 700px;
+      font-size: 80px;
+      line-height: 80px;
     }
 
     &-subheading {
-      font-size: 32px;
+      font-size: 22px;
       font-weight: 300;
-      line-height: 1;
-      margin: 0 !important;
+      margin: 0 0 $margin-md 0;
+      max-width: 700px;
     }
   }
 
   &__socials {
     margin: 0 0 $margin-md 0;
-    // position: absolute;
-    // bottom: 1rem;
-    // left: 50%;
-    // transform: translateX(-50%);
   }
 
   &__buttons {
