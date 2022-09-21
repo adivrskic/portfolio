@@ -1,7 +1,7 @@
 import React from "react";
-import { scrollToAnchor } from "../helpers/helpers";
 import { StateContext } from "../context/StateProvider";
 import Socials from "./Socials";
+import { Link } from "react-router-dom";
 import "../styles/components/banner.scss";
 
 function Banner() {
@@ -24,9 +24,9 @@ function Banner() {
         </div>
 
         <div className="banner__buttons">
-          <button className="button" onClick={() => scrollToAnchor("profile")}>
-            learn more
-          </button>
+          <Link to="/skills">
+            <button className="button">learn more</button>
+          </Link>
           <a className="button" href="mailto:adivrskic123@gmail.com">
             let's work together
           </a>

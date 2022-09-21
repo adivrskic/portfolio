@@ -1,5 +1,10 @@
 import React, { useEffect, useContext } from "react";
-import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
+import {
+  IoSunnyOutline,
+  IoMoonOutline,
+  IoReaderOutline,
+  IoReader,
+} from "react-icons/io5";
 import { StateContext } from "../context/StateProvider";
 import { Link } from "react-router-dom";
 import "../styles/components/header.scss";
@@ -27,8 +32,8 @@ function Header() {
         </Link>
         <nav className="header__nav">
           <ul>
-            <Link to="/profile">
-              <li>profile</li>
+            <Link to="/skills">
+              <li>skills</li>
             </Link>
             <Link to="/work">
               <li>work</li>
@@ -37,6 +42,15 @@ function Header() {
             <Link to="/contact" className="header__button">
               <li c>contact</li>
             </Link>
+            <li>
+              <a
+                className="header__mode"
+                href="/docs/AdiVrskicResume.pdf"
+                download
+              >
+                <IoReaderOutline />
+              </a>
+            </li>
             <li
               className="header__mode"
               onClick={() => dispatch({ type: "TOGGLE_THEME" })}

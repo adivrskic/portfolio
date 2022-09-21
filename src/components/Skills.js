@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Stat from "../components/Stat";
+import Stat from "./Stat";
 import {
   stats,
   frontendStats,
@@ -11,7 +11,7 @@ import { statButtons } from "../data/buttons";
 import { StateContext } from "../context/StateProvider";
 import "../styles/components/profile.scss";
 
-function Profile() {
+function Skills() {
   const [{ isDarkTheme }] = React.useContext(StateContext);
 
   const stringToData = {
@@ -37,31 +37,7 @@ function Profile() {
 
   return (
     <section id="profile" className="main-container">
-      <h2 class="section-heading">Profile</h2>
       <div className="profile-content">
-        <p className="profile-content__info">
-          I have several years of front and back end development experience
-          building and enhancing both large and small scale eCommerce websites
-          and applications. Professional knowledge in multiple different web
-          development frameworks and libraries, especially React.
-        </p>
-
-        <div className="profile-content__resume">
-          <a
-            className={`button ${isDarkTheme ? "dark" : "light"}`}
-            href="/docs/AdiVrskicResume.pdf"
-            download
-          >
-            Download Resume PDF
-          </a>
-          <a
-            className={`button ${isDarkTheme ? "dark" : "light"}`}
-            href="/docs/AdiVrskicResume.doc"
-            download
-          >
-            Download Resume Doc
-          </a>
-        </div>
         <div className="container">
           <div className="profile-content__filters">
             {statButtons.map(({ id, displayName }) => (
@@ -91,7 +67,7 @@ function Profile() {
             )}
           </div>
         </div>
-
+        {/* 
         <div className="profile-content__logos">
           <img
             src={
@@ -109,10 +85,10 @@ function Profile() {
             }
             alt="Squarespace Logo"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );
 }
 
-export default Profile;
+export default Skills;

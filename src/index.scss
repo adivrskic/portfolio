@@ -41,28 +41,9 @@ body {
   }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2.25rem;
-}
-
 a {
   text-decoration: none;
   color: $text-light;
-}
-
-p,
-a,
-span {
-  font-weight: 300;
 }
 
 ul,
@@ -112,19 +93,15 @@ ol {
   }
 }
 
-.section-heading {
-  color: $text-light;
-  font-weight: 600;
-  font-size: 2.5rem;
-}
-
 .main {
-  @include flex(column, center, center);
+  height: 100vh;
+  width: 100%;
 }
 
 .main-container {
   @include flex(column, center, center);
   width: 100%;
+  height: 100%;
   padding: $margin-md $margin-sm $margin-md $margin-sm;
 
   &.full-width {

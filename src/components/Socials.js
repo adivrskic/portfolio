@@ -1,15 +1,19 @@
 import React from "react";
-import {
-  IoLogoGithub,
-  IoLogoLinkedin,
-  IoLogoSteam,
-  IoMail,
-} from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5";
 import "../styles/components/socials.scss";
 
 function Socials({ size, color, margin }) {
   return (
     <div className={`social-links ${size} ${color} ${margin}`}>
+      <a
+        className="social-link"
+        target="_blank"
+        rel="noreferrer"
+        href="mailto:adivrskic123@gmail.com"
+        aria-label="EMail"
+      >
+        <IoMail />
+      </a>
       <a
         className="social-link"
         target="_blank"
@@ -27,24 +31,6 @@ function Socials({ size, color, margin }) {
         aria-label="LinkedIn"
       >
         <IoLogoLinkedin />
-      </a>
-      {/* <a
-        className="social-link"
-        target="_blank"
-        rel="noreferrer"
-        href="/steam"
-        aria-label="Steam"
-      >
-        <IoLogoSteam />
-      </a> */}
-      <a
-        className="social-link"
-        target="_blank"
-        rel="noreferrer"
-        href="mailto:adivrskic123@gmail.com"
-        aria-label="EMail"
-      >
-        <IoMail />
       </a>
     </div>
   );
