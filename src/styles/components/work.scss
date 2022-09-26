@@ -1,5 +1,10 @@
 @import "../sizes";
 @import "../margins";
+@import "../colors";
+
+#work {
+  background-color: $color-darkmode-bg-light;
+}
 
 .work-content {
   padding: 0 30px;

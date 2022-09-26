@@ -16,6 +16,7 @@
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.0",
     "react-scrollspy": "^3.4.3",
+    "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

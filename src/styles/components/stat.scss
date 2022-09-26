@@ -4,20 +4,19 @@
 @import "../sizes";
 
 .stat {
-  @include flex($jus: center, $ali: center);
-  padding: 0 0 2.5rem 0;
+  @include flex($jus: space-between, $ali: center);
+  flex-basis: calc(50% - 10px);
+  padding: 0 2rem;
   cursor: pointer;
   position: relative;
-  border-radius: $border-radius;
+  border: 1px solid #fff;
+  height: 80px;
   font-size: 24px;
-  transition: all 0.25s ease-in-out;
-
-  &:first-child {
-    padding-top: 2.5rem;
-  }
+  transition: all 0.24s ease-in-out;
 
   &:hover {
-    transform: translateX(-20px);
+    color: $text-dark;
+    background-color: #fff;
   }
 
   &-icon {

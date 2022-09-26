@@ -5,7 +5,6 @@
 .contact-content {
   @include flex(column, center, center);
   text-align: center;
-  max-width: $content-width;
   font-size: 26px;
 
   p {

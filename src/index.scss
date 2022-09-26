@@ -97,6 +97,10 @@ ol {
 .main {
   height: 100vh;
   width: 100%;
+
+  & + div {
+    height: 100%;
+  }
 }
 
 .main-container {

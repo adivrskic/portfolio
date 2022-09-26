@@ -3,6 +3,10 @@
 @import "../sizes";
 @import "../mixins";
 
+#profile {
+  background-color: $color-darkmode-bg-light;
+}
+
 .profile-content {
   @include flex(row, $ali: center);
   margin-top: 60px;
@@ -15,8 +19,8 @@
   }
 
   &__info {
-    max-width: $text-width;
     margin: 0 auto;
+    padding-right: 2.5rem;
     text-align: left;
     font-size: 24px;
   }
@@ -62,14 +66,8 @@
   }
 
   &__stats {
-    @include flex($dir: column, $ali: flex-end);
-    overflow: scroll;
-    height: 100%;
-
-    /* width */
-    &::-webkit-scrollbar {
-      width: 0;
-    }
+    @include flex($wrap: wrap);
+    gap: 20px;
   }
 
   &__logos {
