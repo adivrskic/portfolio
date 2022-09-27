@@ -2,7 +2,6 @@
 @import "styles/margins";
 @import "styles/mixins";
 @import "styles/sizes";
-@import "styles/overrides";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,100&display=swap");
 
@@ -12,7 +11,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -20,26 +18,13 @@ html {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
   color: $text-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-
-  /* width */
-  &::-webkit-scrollbar {
-    width: 0.4rem;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: $color-darkmode-bg-dark;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-darkmode-bg;
-    border-radius: 999px;
-  }
 }
 
 a {
@@ -52,26 +37,18 @@ ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  font-weight: 300;
-}
-
-.container {
-  padding: $padding-md;
-  background-color: $color-darkmode-bg-dark;
-  border-radius: $border-radius;
-  box-shadow: $image-box-shadow;
+  font-weight: bold;
 }
 
 .button {
   padding: 0.75rem 1rem;
-  // border-radius: 2.5rem;
   color: $text-light;
   background-image: $button-darkmode-bg;
   background-size: 150%;
-  font-weight: 600;
   cursor: pointer;
   border: none;
-  font-size: 1rem;
+  font-size: 1.125rem;
+  font-weight: bold;
   transition: $transition-fast;
   box-shadow: $button-box-shadow-dark;
   text-align: center;
@@ -107,11 +84,6 @@ ol {
   @include flex(column, center, center);
   width: 100%;
   height: 100%;
-  // padding: $margin-md $margin-sm $margin-md $margin-sm;
-
-  &.full-width {
-    padding: 6.025em 0;
-  }
 
   &.theme-bg {
     background: $section-darkmode-bg;
@@ -131,22 +103,6 @@ ol {
   }
 }
 
-.main-container:nth-child(even) {
-  background-color: $color-darkmode-bg-light;
-}
-
-.main-container:nth-child(odd) {
-  background-color: $color-darkmode-bg-dark;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 100%;
-  margin-top: $margin-md;
-}
-
 a:focus,
 button:focus {
   outline-color: $color-darkmode-highlight;
@@ -162,10 +118,6 @@ body.lightmode {
 
   a {
     color: $text-dark;
-  }
-
-  .container {
-    background-color: $color-lightmode-bg-dark;
   }
 
   .button {
@@ -203,24 +155,6 @@ body.lightmode {
 
   .main-container.theme-bg {
     background: $section-lightmode-bg;
-  }
-
-  .main-container:nth-child(even) {
-    background-color: $color-lightmode-bg-light;
-  }
-
-  .main-container:nth-child(odd) {
-    background-color: $color-lightmode-bg-dark;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: $color-lightmode-bg-dark;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-lightmode-bg;
   }
 }
 

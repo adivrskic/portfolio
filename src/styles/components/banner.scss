@@ -25,43 +25,34 @@
     &-heading {
       font-size: 80px;
       line-height: 80px;
-      opacity: 0;
-      transform: translateX(-40px);
       animation: slideIn 0.5s ease-in-out forwards;
-      animation-delay: 0.33s;
+      animation-delay: 0.2s;
     }
 
     &-subheading {
-      font-size: 22px;
-      font-weight: 300;
       margin: 0 0 $margin-md 0;
       max-width: 700px;
-      opacity: 0;
-      transform: translateX(-40px);
       animation: slideIn 0.5s ease-in-out forwards;
-      animation-delay: 0.66s;
+      animation-delay: 0.5s;
 
       &:last-of-type {
-        animation-delay: 0.99s;
+        animation-delay: 0.8s;
       }
     }
   }
 
   &__socials {
     margin: 0 0 $margin-md 0;
-    opacity: 0;
-    transform: translateX(-40px);
     animation: slideIn 0.5s ease-in-out forwards;
-    animation-delay: 1.2s;
+    animation-delay: 1.1s;
   }
 
   &__buttons {
     @include flex($jus: center);
     gap: $flex-gap;
-    opacity: 0;
-    transform: translateX(-40px);
+
     animation: slideIn 0.5s ease-in-out forwards;
-    animation-delay: 1.53s;
+    animation-delay: 1.4s;
 
     .button:first-child {
       background: none;
@@ -74,7 +65,8 @@
     }
 
     .button {
-      width: 201px;
+      width: 250px;
+      height: 50px;
     }
   }
 
@@ -92,8 +84,19 @@ body.lightmode {
 
     &__content {
       color: $text-light;
+
+      &-heading {
+      }
     }
   }
+}
+
+.banner__content-heading,
+.banner__content-subheading,
+.banner__socials,
+.banner__buttons {
+  opacity: 0;
+  transform: translateX(-50px);
 }
 
 @keyframes slideIn {

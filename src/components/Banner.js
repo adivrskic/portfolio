@@ -1,12 +1,9 @@
 import React from "react";
-import { StateContext } from "../context/StateProvider";
 import Socials from "./Socials";
 import { Link } from "react-router-dom";
 import "../styles/components/banner.scss";
 
 function Banner() {
-  const [{ isDarkTheme }] = React.useContext(StateContext);
-
   return (
     <div id="banner" className="banner">
       <div className="banner__content">

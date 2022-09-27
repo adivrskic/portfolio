@@ -1,5 +1,4 @@
 import React from "react";
-import Tooltip from "./Tooltip";
 import {
   DiHtml5,
   DiCss3,
