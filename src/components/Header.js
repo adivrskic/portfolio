@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
-import GalleryContainer from "./GalleryContainer";
 import { StateContext } from "../context/StateProvider";
 import { pictures } from "../data/pictures";
 import "../styles/components/header.scss";
@@ -45,17 +44,7 @@ function Header() {
 
   return (
     <header className="header">
-      <div className={`image ${imageVisible ? "image-visible" : ""}`}>
-        {imageVisible && (
-          <GalleryContainer
-            galleryImages={pictures.gallery}
-            isOpen={true}
-            onClose={() => {
-              resetPicture();
-            }}
-          />
-        )}
-      </div>
+      <div className={`image ${imageVisible ? "image-visible" : ""}`}></div>
       <div className="header__content">
         <div className="header__logo" onClick={() => displayPicture(count)}>
           <div>a</div>
