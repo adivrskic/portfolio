@@ -1,0 +1,12 @@
+// $animation-standard: 0.67s;
+$delay-fast: 0.5s;
+$delay-standard: 0.75s;
+$animations-slow: 1.3s;
+$delay-slow: 1s;
+
+$transition-standard: all 0.25s cubic-bezier(0.5, 0, 0.33, 1);
+$transition-slow: all 1.2s ease-in-out;
+
+$animation-fast: 0.25s cubic-bezier(0.5, 0, 0.33, 1) forwards;
+$animation-standard: 0.5s cubic-bezier(0.5, 0, 0.33, 1) forwards;
+$animation-slow: 1s cubic-bezier(0.5, 0, 0.33, 1) forwards;

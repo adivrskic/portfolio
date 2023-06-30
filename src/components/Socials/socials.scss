@@ -1,0 +1,49 @@
+@import "../../styles/colors";
+@import "../../styles/margins";
+@import "../../styles/sizes";
+@import "../../styles/mixins";
+
+.social-links {
+  display: flex;
+  margin: $margin-sm 0;
+
+  .social-link {
+    transition: $transition-fast;
+  }
+
+  .social-link:hover {
+    color: darken($text-light, 7.5%);
+  }
+
+  .social-link:not(:last-child) {
+    margin-right: $margin-sm;
+  }
+}
+
+.social-links.dark {
+  .social-link {
+    color: $text-light;
+  }
+}
+
+.social-links.light {
+  .social-link {
+    color: $text-light;
+  }
+}
+
+.social-links.small {
+  .social-link,
+  .social-link svg {
+    width: $icon-sm;
+    height: $icon-sm;
+  }
+}
+
+.social-links.margin-small {
+  margin-bottom: $margin-sm;
+}
+
+.social-links.margin-medium {
+  margin-bottom: $margin-md;
+}

@@ -57,3 +57,8 @@ $section-lightmode-bg: $gradient-ttb-lightmode;
 $transition-fast: all 0.2s ease-in-out;
 $transition: all 0.4s ease-in-out;
 $transition-slow: all 0.6s ease-in-out;
+
+$background: rgb(18, 20, 26);
+$background-lighter: lighten($background, 1.25%);
+
+$text: #fff;

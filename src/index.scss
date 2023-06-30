@@ -4,15 +4,34 @@
 @import "styles/sizes";
 @import "styles/overrides";
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,100&display=swap");
+@font-face {
+  font-family: "Bold";
+  src: local("Roboto-Bold"), url("./fonts/Roboto-Bold.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "Regular";
+  src: local("Roboto-Regular"),
+    url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Light";
+  src: local("Roboto-Light"), url("./fonts/Roboto-Light.ttf") format("truetype");
+}
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  background: darken($background, 2.5%); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: darken($background, 2.5%); /* WebKit/Blink Browsers */
 }
 
 html {
@@ -23,35 +42,23 @@ body {
   color: $text-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $background;
+  font-family: "Regular", sans-serif;
 
   /* width */
   &::-webkit-scrollbar {
-    width: 0.4rem;
+    width: 0;
   }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: $color-darkmode-bg-dark;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-darkmode-bg;
-    border-radius: 999px;
-  }
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 48px;
+  letter-spacing: 2px;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 36px;
+  letter-spacing: 2px;
 }
 
 a {
@@ -62,6 +69,16 @@ a {
 p,
 a,
 span {
+  font-family: Light;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+P {
+  font-size: 18px;
+  margin: 0 0 40px 0;
+  letter-spacing: 0.8px;
+  line-height: 1.75;
   font-weight: 300;
 }
 
@@ -73,41 +90,36 @@ ol {
   font-weight: 300;
 }
 
+input,
+textarea {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
 .container {
   padding: $padding-md;
-  background-color: $color-darkmode-bg-dark;
+  // background-color: $color-darkmode-bg-dark;
   border-radius: $border-radius;
   box-shadow: $image-box-shadow;
 }
 
 .button {
-  padding: 0.667rem 1.5rem;
-  border-radius: 2.5rem;
+  border-radius: 2px;
+  padding: 15px 30px;
   color: $text-light;
   background-image: $button-darkmode-bg;
-  background-size: 150%;
-  font-weight: 600;
+  background-size: 130%;
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
-  font-size: 1rem;
+  font-size: 16px;
   transition: $transition-fast;
+  font-family: Bold;
   box-shadow: $button-box-shadow-dark;
 
   &:hover {
-    background-size: 500%;
-  }
-
-  &--inverse {
-    color: $color-darkmode-highlight;
-    background: none;
-    box-shadow: none;
-
-    &.active,
-    &:hover {
-      color: $text-light;
-      background: $button-darkmode-bg;
-      box-shadow: $button-box-shadow-dark;
-    }
+    filter: brightness(1.12);
   }
 }
 
@@ -131,7 +143,7 @@ ol {
   }
 
   &.theme-bg {
-    background: $section-darkmode-bg;
+    // background: $section-darkmode-bg;
     color: $text-light;
 
     .button {
@@ -148,14 +160,6 @@ ol {
   }
 }
 
-.main-container:nth-child(even) {
-  background-color: $color-darkmode-bg-light;
-}
-
-.main-container:nth-child(odd) {
-  background-color: $color-darkmode-bg-dark;
-}
-
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -167,78 +171,6 @@ ol {
 a:focus,
 button:focus {
   outline-color: $color-darkmode-highlight;
-}
-
-body.lightmode {
-  color: $text-dark;
-
-  a:focus,
-  button:focus {
-    outline-color: $color-lightmode-highlight;
-  }
-
-  a {
-    color: $text-dark;
-  }
-
-  .container {
-    background-color: $color-lightmode-bg-dark;
-  }
-
-  .button {
-    color: $text-light;
-    background-image: $button-lightmode-bg;
-    box-shadow: $button-box-shadow-light;
-
-    &:hover {
-      animation: button-hover 2s linear infinite alternate;
-    }
-
-    &--inverse {
-      color: $color-lightmode-highlight;
-      background: none;
-      box-shadow: none;
-
-      &.active,
-      &:hover {
-        color: $text-light;
-        background: $button-lightmode-bg;
-        box-shadow: $button-box-shadow-light;
-      }
-    }
-  }
-
-  .main-container:not(.theme-bg) {
-    .section-heading {
-      color: $text-dark;
-    }
-
-    .main {
-      color: $text-dark;
-    }
-  }
-
-  .main-container.theme-bg {
-    background: $section-lightmode-bg;
-  }
-
-  .main-container:nth-child(even) {
-    background-color: $color-lightmode-bg-light;
-  }
-
-  .main-container:nth-child(odd) {
-    background-color: $color-lightmode-bg-dark;
-  }
-
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: $color-lightmode-bg-dark;
-  }
-
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar-lightmode-bg;
-  }
 }
 
 @keyframes button-hover {

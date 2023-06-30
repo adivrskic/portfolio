@@ -1,29 +1,24 @@
-import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
-import Profile from "./components/Profile";
+import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { StateProvider } from "./context/StateProvider";
 
 function App() {
   return (
-    <StateProvider>
-      <div className="app">
-        <Header />
+    <div className="app">
+      <Header />
 
-        <main className="main">
-          <Banner />
-          <Profile />
-          <Work />
-          {/* <Games /> */}
-          <Contact />
-        </main>
+      <main className="main">
+        <Banner />
+        <Work />
+        <Skills />
+        <Contact />
+      </main>
 
-        <Footer />
-      </div>
-    </StateProvider>
+      <Footer />
+    </div>
   );
 }
 
