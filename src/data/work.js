@@ -9,7 +9,7 @@ export const work = [
     images: [
       {
         imageType: "landing",
-        image: "/images/work/pillow/landing.png",
+        image: "images/work/pillow/landing.png",
         alt: "Pillow UI landing page",
       },
       {
@@ -62,7 +62,7 @@ export const work = [
     images: [
       {
         imageType: "landing",
-        image: "/images/work/battleandbrew/landing.png",
+        image: "images/work/battleandbrew/landing.png",
         alt: "Battle & Brew landing page",
       },
       {
@@ -115,7 +115,7 @@ export const work = [
     images: [
       {
         imageType: "landing",
-        image: "/images/work/karastanrugs/landing.png",
+        image: "images/work/karastanrugs/landing.png",
         alt: "Karastan Rugs landing page",
       },
       {
@@ -168,7 +168,7 @@ export const work = [
     images: [
       {
         imageType: "landing",
-        image: "/images/work/mohawkfactoryoutlet/landing.png",
+        image: "images/work/mohawkfactoryoutlet/landing.png",
         alt: "Mohawk Factory Outlet landing page",
       },
       {

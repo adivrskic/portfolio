@@ -159,6 +159,11 @@
     &__form {
       width: 100%;
       text-align: center;
+
+      &-error {
+        @include pos(absolute, $bottom: -30px, $left: 50%);
+        transform: translate(-50%, 20px) !important;
+      }
     }
 
     &__info {

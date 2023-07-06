@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
 import GalleryContainer from "../GalleryContainer";
+import WorkDetail from "./subcomponents/WorkDetail";
 import { work } from "../../data/work";
 import "./work.scss";
 
 function Work() {
   const [index, setIndex] = useState(0);
   const [transformPercentage, setTransformPercentage] = useState(0);
+  const [workDetailActive, setWorkDetailActive] = useState(false);
 
   const goToPrev = () => {
     const container = document.querySelector(`.work__content`);
@@ -24,7 +26,9 @@ function Work() {
     setIndex(index + 1);
   };
 
-  const viewMore = (index) => {};
+  const viewMore = (index) => {
+    setWorkDetailActive(true);
+  };
   return (
     <section id="work" className="work">
       <div className="work__content">
@@ -40,7 +44,7 @@ function Work() {
                 <h2>{work[i].projectName}</h2>
                 <div className="work__description-skills">
                   {work[i].skills.map((skill) => (
-                    <span>{skill}</span>
+                    <span>#{skill}</span>
                   ))}
                 </div>
                 <button className="button" onClick={() => viewMore(i)}>
@@ -67,6 +71,8 @@ function Work() {
           <IoChevronForwardOutline />
         </button>
       </div>
+
+      {workDetailActive && <WorkDetail />}
     </section>
   );
 }
