@@ -32,7 +32,7 @@ function Banner() {
       <img
         className="banner__background"
         src="/images/test.jpg"
-        alt="Background image"
+        alt="geometric green background"
       />
       <div className="banner__background-fade"></div>
     </div>
