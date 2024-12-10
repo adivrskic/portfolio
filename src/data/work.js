@@ -1,210 +1,119 @@
-export const work = [
+export const data = [
   {
-    projectNum: "1",
-    projectName: "Pillow UI library",
-    projectSubText: "",
-    href: "https://unrivaled-longma-0a1d47.netlify.app",
-    skills: ["React", "Javascript", "HTML", "SCSS", "Netlify", "Npm"],
-    projectDetailText: "A neumorphism-inspired UI library",
-    images: [
-      {
-        imageType: "landing",
-        image: "images/work/pillow/landing.png",
-        alt: "Pillow UI landing page",
-      },
-      {
-        imageType: "fullscreen1",
-        image: "/images/work/pillow/full1.png",
-        alt: "Pillow UI full page",
-      },
-      {
-        imageType: "fullscreen2",
-        image: "/images/work/pillow/full2.png",
-        alt: "Pillow UI full page",
-      },
-      {
-        imageType: "element",
-        image: "/images/work/pillow/element.png",
-        alt: "Pillow UI element",
-      },
-      {
-        imageType: "head",
-        image: "/images/work/pillow/header.png",
-        alt: "Pillow UI header",
-      },
-      {
-        imageType: "section",
-        image: "/images/work/pillow/section.png",
-        alt: "Pillow UI section",
-      },
-      {
-        imageType: "mobile",
-        image: "/images/work/pillow/mobile.png",
-        alt: "Pillow UI mobile",
-      },
+    id: 0,
+    name: "The Home Depot",
+    image: "/images/homedepot.png",
+    link: "https://www.homedepot.com",
+    skills: [
+      "React",
+      "Tailwind",
+      "Frontend",
+      "Backend",
+      "GraphQL",
+      "Newrelic",
+      "Quantum Metric",
+      "Agile",
     ],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(252, 66, 12, 0.5)", // Semi-transparent orange
+    color3: "rgba(255, 179, 0, 0.5)", // Semi-transparent yellow
   },
   {
-    projectNum: "2",
-    projectName: "Battle & Brew",
-    projectSubText: "Gaming Bar and Arcade",
-    href: "https://www.battleandbrew.com",
+    id: 1,
+    name: "Covered By Rugs",
+    image: "/images/coveredbyrugs.png",
+    link: "https://www.coveredbyrugs.com",
     skills: [
       "Javascript",
-      "HTML",
-      "CSS",
+      "Shopify",
+      "eCommerce",
+      "SEO",
+      "Google Analytics",
+      "Custom Development",
+    ],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(94, 84, 48, 0.5)", // Semi-transparent olive green
+    color3: "rgba(118, 139, 68, 0.5)", // Semi-transparent green
+  },
+  {
+    id: 2,
+    name: "Mohawk Factory Outlet",
+    image: "/images/mohawkfactoryoutlet.png",
+    link: "https://www.mohawkfactoryoutlet.com",
+    skills: [
+      "Javascript",
+      "jQuery",
+      "Shopify",
+      "Tag Manager",
+      "SEO",
+      "Google Analytics",
+      "Custom Development",
+    ],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(39, 39, 39, 0.5)", // Semi-transparent dark grey
+    color3: "rgba(255, 17, 0, 0.5)", // Semi-transparent orange
+  },
+  {
+    id: 3,
+    name: "Karastan Rugs",
+    image: "/images/karastan.png",
+    link: "https://www.karastanrugs.com",
+    skills: [
+      "Javascript",
+      "Shopify",
+      "eCommerce",
+      "SEO",
+      "Google Analytics",
+      "Custom Development",
+    ],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(139, 102, 50, 0.5)", // Semi-transparent brown
+    color3: "rgba(179, 127, 66, 0.5)", // Semi-transparent light brown
+  },
+  {
+    id: 4,
+    name: "Battle & Brew",
+    image: "/images/battleandbrew.png",
+    link: "https://www.battleandbrew.com",
+    skills: [
       "Squarespace",
       "SEO",
       "Google Analytics",
+      "Custom Development",
+      "Plugin Development",
     ],
-    projectDetailText:
-      "The first-ever gaming restaurant and venue in the United States",
-    images: [
-      {
-        imageType: "landing",
-        image: "images/work/battleandbrew/landing.png",
-        alt: "Battle & Brew landing page",
-      },
-      {
-        imageType: "fullscreen1",
-        image: "/images/work/battleandbrew/full1.png",
-        alt: "Battle & Brew full page",
-      },
-      {
-        imageType: "fullscreen2",
-        image: "/images/work/battleandbrew/full2.png",
-        alt: "Battle & Brew full page",
-      },
-      {
-        imageType: "element",
-        image: "/images/work/battleandbrew/element.png",
-        alt: "Battle & Brew element",
-      },
-      {
-        imageType: "head",
-        image: "/images/work/battleandbrew/header.png",
-        alt: "Battle & Brew header",
-      },
-      {
-        imageType: "section",
-        image: "/images/work/battleandbrew/section.png",
-        alt: "Battle & Brew section",
-      },
-      {
-        imageType: "mobile",
-        image: "/images/work/battleandbrew/mobile.png",
-        alt: "Battle & Brew mobile",
-      },
-    ],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(7, 7, 7, 0.5)", // Semi-transparent dark grey
+    color3: "rgba(214, 29, 82, 0.5)", // Semi-transparent red
   },
   {
-    projectNum: "3",
-    projectName: "Karastan Rugs",
-    projectSubText: "Luxury Rug Retailer",
-    href: "https://www.karastanrugs.com",
-    skills: [
-      "Javascript",
-      "jQuery",
-      "HTML",
-      "CSS",
-      "Shopify",
-      "Microsoft Azure",
-    ],
-    projectDetailText:
-      "A leader in luxury fashion area rugs, with a history that spans over 90 years",
-    images: [
-      {
-        imageType: "landing",
-        image: "images/work/karastanrugs/landing.png",
-        alt: "Karastan Rugs landing page",
-      },
-      {
-        imageType: "fullscreen1",
-        image: "/images/work/karastanrugs/full1.png",
-        alt: "Karastan Rugs full page",
-      },
-      {
-        imageType: "fullscreen2",
-        image: "/images/work/karastanrugs/full2.png",
-        alt: "Karastan Rugs full page",
-      },
-      {
-        imageType: "element",
-        image: "/images/work/karastanrugs/element.png",
-        alt: "Karastan Rugs element",
-      },
-      {
-        imageType: "head",
-        image: "/images/work/karastanrugs/header.png",
-        alt: "Karastan Rugs header",
-      },
-      {
-        imageType: "section",
-        image: "/images/work/karastanrugs/section.png",
-        alt: "Karastan Rugs section",
-      },
-      {
-        imageType: "mobile",
-        image: "/images/work/karastanrugs/mobile.png",
-        alt: "Karastan Rugs mobile",
-      },
-    ],
+    id: 5,
+    name: "Pillow",
+    image: "/images/pillow.png",
+    link: "https://unrivaled-longma-0a1d47.netlify.app/",
+    skills: ["React", "Styled Components", "Component Library", "Npm"],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(85, 99, 191, 0.5)", // Semi-transparent blue
+    color3: "rgba(252, 55, 255, 0.5)", // Semi-transparent magenta
   },
   {
-    projectNum: "4",
-    projectName: "Mohawk Factory Outlet",
-    projectSubText: "Discount Flooring Retailer",
-    href: "https://www.mohawkfactoryoutlet.com",
-    skills: [
-      "Javascript",
-      "jQuery",
-      "HTML",
-      "CSS",
-      "Shopify",
-      "Microsoft Azure",
-    ],
-    projectDetailText:
-      "A website selling discontinued first-quality flooring directly from the world's biggest flooring manufacturer, including brands like Mohawk, Pergo, Simple Solutions and more",
-    images: [
-      {
-        imageType: "landing",
-        image: "images/work/mohawkfactoryoutlet/landing.png",
-        alt: "Mohawk Factory Outlet landing page",
-      },
-      {
-        imageType: "fullscreen1",
-        image: "/images/work/mohawkfactoryoutlet/full1.png",
-        alt: "Mohawk Factory Outlet full page",
-      },
-      {
-        imageType: "fullscreen2",
-        image: "/images/work/mohawkfactoryoutlet/full2.png",
-        alt: "Mohawk Factory Outlet full page",
-      },
-      {
-        imageType: "element",
-        image: "/images/work/mohawkfactoryoutlet/element.png",
-        alt: "Mohawk Factory Outlet element",
-      },
-      {
-        imageType: "head",
-        image: "/images/work/mohawkfactoryoutlet/header.png",
-        alt: "Mohawk Factory Outlet header",
-      },
-      {
-        imageType: "section",
-        image: "/images/work/mohawkfactoryoutlet/section.png",
-        alt: "Mohawk Factory Outlet section",
-      },
-      {
-        imageType: "mobile",
-        image: "/images/work/mohawkfactoryoutlet/mobile.png",
-        alt: "Mohawk Factory Outlet mobile",
-      },
-    ],
+    id: 6,
+    name: "Copycat Plagiarism Analyzer",
+    image: "/images/copycat.png",
+    link: "https://adivrskic.pythonanywhere.com",
+    skills: ["Python", "Flask", "Bulma", "BeautifulSoup", "Scikit-learn"],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(41, 255, 185, 0.5)", // Semi-transparent blue
+    color3: "rgba(142, 68, 173, 0.5)", // Semi-transparent purple
   },
-  // {
-  //   projectNum: "5",
-  //   projectName: "Home Depot Product Page",
-  // },
+  {
+    id: 7,
+    name: "Infinite Zoom Fader",
+    image: "/images/izf.png",
+    link: "https://scintillating-malasada-3227fb.netlify.app/",
+    skills: ["React", "Npm", "Reusable component", "Customizable"],
+    color1: "rgba(255, 255, 255, 0.5)", // Semi-transparent white
+    color2: "rgba(48, 63, 159, 0.5)", // Semi-transparent indigo
+    color3: "rgba(103, 58, 183, 0.5)", // Semi-transparent purple
+  },
 ];
